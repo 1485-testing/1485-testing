@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>시공 사례 | 스마트디자인 강동구 집수리</title>
+  <meta name="description" content="스마트디자인 강동구 변기교체·수전교체·환풍기교체 실제 시공 사례 모음. 천호동, 성내동, 길동, 암사동 등 현장 사례." />
+  <link rel="canonical" href="https://smart-designhome.netlify.app/cases/" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"홈","item":"https://smart-designhome.netlify.app/"},
+      {"@type":"ListItem","position":2,"name":"시공 사례","item":"https://smart-designhome.netlify.app/cases/"}
+    ]
+  }
+  </script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--primary:#1a4f8a;--accent:#e8a020;--bg:#f9f9f7;--card:#fff;--text:#222;--muted:#666;--border:#e0e0e0;--r:10px}
+    body{font-family:'Apple SD Gothic Neo','Malgun Gothic',sans-serif;background:var(--bg);color:var(--text);font-size:15px;line-height:1.65}
+    a{color:inherit;text-decoration:none}
+    header{background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 16px;height:56px;position:sticky;top:0;z-index:100}
+    .logo{font-size:17px;font-weight:800}
+    .header-cta{background:var(--accent);color:#fff;padding:7px 14px;border-radius:6px;font-weight:700;font-size:13px}
+    .page-tabs{display:flex;border-bottom:2px solid var(--border);background:var(--card);position:sticky;top:56px;z-index:90}
+    .page-tab{flex:1;text-align:center;padding:12px 8px;font-size:13px;font-weight:700;color:var(--muted);border-bottom:3px solid transparent}
+    .page-tab.active{color:var(--primary);border-bottom-color:var(--primary)}
+    .page-hero{background:linear-gradient(135deg,#1a4f8a,#0d3060);color:#fff;padding:28px 20px 24px;text-align:center}
+    .page-hero h1{font-size:20px;font-weight:800;margin-bottom:6px}
+    .page-hero p{font-size:13px;opacity:.8}
+    main{padding:20px 16px}
+    .filter-bar{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;margin-bottom:16px;-webkit-overflow-scrolling:touch}
+    .filter-bar::-webkit-scrollbar{height:3px}
+    .filter-btn{white-space:nowrap;padding:7px 14px;border-radius:20px;font-size:13px;font-weight:600;border:1.5px solid var(--border);background:var(--card);cursor:pointer;transition:.2s}
+    .filter-btn.active{background:var(--primary);color:#fff;border-color:var(--primary)}
+    #cases-list{display:grid;gap:14px}
+    .case-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
+    .case-img{width:100%;aspect-ratio:16/9;background:linear-gradient(135deg,#dde3ed,#c8d4e8);display:flex;align-items:center;justify-content:center;font-size:36px;color:var(--muted)}
+    .case-body{padding:14px}
+    .case-meta{display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+    .case-badge{display:inline-block;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700;background:#e8f0fb;color:var(--primary)}
+    .case-date{font-size:11px;color:var(--muted)}
+    .case-title{font-size:15px;font-weight:800;margin-bottom:6px}
+    .case-location{font-size:12px;color:var(--muted);margin-bottom:8px}
+    .case-desc{font-size:13px;color:var(--muted);line-height:1.6}
+    .case-tags{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}
+    .tag-chip{font-size:11px;padding:3px 8px;background:#f0f0f0;border-radius:4px;color:var(--muted)}
+    .empty-state{text-align:center;padding:40px 20px;color:var(--muted);font-size:14px}
+    .cta-bottom{background:linear-gradient(135deg,#1a4f8a,#0d3060);border-radius:var(--r);padding:20px;text-align:center;color:#fff;margin-top:20px}
+    .cta-bottom p{font-size:13px;margin-bottom:12px;opacity:.85}
+    .cta-bottom a{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;padding:13px 24px;border-radius:50px;font-size:18px;font-weight:800}
+    footer{background:#1a1a1a;color:rgba(255,255,255,.6);padding:24px 20px;font-size:12px;text-align:center;line-height:2;margin-top:24px}
+    footer strong{color:#fff;font-size:14px;display:block;margin-bottom:4px}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">✦ 스마트디자인</div>
+  <a href="tel:010-5064-2342" class="header-cta">📞 긴급상담</a>
+</header>
+
+<div class="page-tabs">
+  <a href="/" class="page-tab">홈</a>
+  <a href="/cases/" class="page-tab active">시공사례</a>
+  <a href="/posts/" class="page-tab">지역정보</a>
+</div>
+
+<div class="page-hero">
+  <h1>📷 시공 사례</h1>
+  <p>스마트디자인 강동구 실제 시공 현장 기록</p>
+</div>
+
+<main>
+  <!-- 필터 버튼 -->
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="전체">전체</button>
+    <button class="filter-btn" data-filter="변기교체">변기교체</button>
+    <button class="filter-btn" data-filter="세면대수전교체">세면대수전</button>
+    <button class="filter-btn" data-filter="싱크대수전교체">싱크대수전</button>
+    <button class="filter-btn" data-filter="환풍기교체">환풍기교체</button>
+    <button class="filter-btn" data-filter="샤워기수전교체">샤워기수전</button>
+  </div>
+
+  <!-- 사례 카드 목록 -->
+  <div id="cases-list">
+    <div class="empty-state">⏳ 불러오는 중...</div>
+  </div>
+
+  <div class="cta-bottom">
+    <p>✦ 시공 문의는 24시 전화 상담으로 빠르게!</p>
+    <a href="tel:010-5064-2342">📞 010-5064-2342</a>
+  </div>
+</main>
+
+<footer>
+  <strong>스마트디자인</strong>
+  대표자: 함종록 | 사업자: 427-05-01489<br>
+  경기도 하남시 대청로 59번길 15 | 010-5064-2342<br>
+  © 2026 스마트디자인.
+</footer>
+
+<script>
+// ── 서비스 아이콘 맵 ──
+const svcIcon = {
+  '변기교체': '🚽',
+  '세면대수전교체': '🪣',
+  '싱크대수전교체': '🍳',
+  '샤워기수전교체': '🚿',
+  '환풍기교체': '💨',
+};
+
+let allCases = [];
+let currentFilter = '전체';
+
+// ── cases.json 로드 ──
+async function loadCases() {
+  try {
+    const res = await fetch('/data/cases.json');
+    allCases = await res.json();
+    renderCases(allCases);
+  } catch (e) {
+    document.getElementById('cases-list').innerHTML =
+      '<div class="empty-state">😕 사례를 불러올 수 없습니다.</div>';
+  }
+}
+
+function renderCases(cases) {
+  const list = document.getElementById('cases-list');
+  const filtered = currentFilter === '전체'
+    ? cases
+    : cases.filter(c => c.service === currentFilter);
+
+  if (!filtered.length) {
+    list.innerHTML = '<div class="empty-state">해당 카테고리의 사례가 아직 없습니다.</div>';
+    return;
+  }
+
+  // 최신순 정렬
+  const sorted = [...filtered].sort((a, b) => b.date.localeCompare(a.date));
+
+  list.innerHTML = sorted.map(c => `
+    <article class="case-card">
+      <div class="case-img">${c.image
+        ? `<img src="${c.image}" alt="${c.title}" style="width:100%;height:100%;object-fit:cover">`
+        : (svcIcon[c.service] || '🔧')}</div>
+      <div class="case-body">
+        <div class="case-meta">
+          <span class="case-badge">${c.service}</span>
+          <span class="case-date">${c.date}</span>
+        </div>
+        <div class="case-title">${c.title}</div>
+        <div class="case-location">📍 ${c.location}</div>
+        <div class="case-desc">${c.description}</div>
+        <div class="case-tags">
+          ${c.tags.map(t => `<span class="tag-chip">#${t}</span>`).join('')}
+        </div>
+      </div>
+    </article>
+  `).join('');
+}
+
+// ── 필터 버튼 ──
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentFilter = btn.dataset.filter;
+    renderCases(allCases);
+  });
+});
+
+loadCases();
+</script>
+</body>
+</html>
