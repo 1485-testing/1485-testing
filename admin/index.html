@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>관리자 | 스마트디자인</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--primary:#1a4f8a;--accent:#e8a020;--bg:#f0f2f5;--card:#fff;--text:#222;--muted:#666;--border:#ddd;--r:10px;--danger:#e53935;--success:#2e7d32}
+    body{font-family:'Apple SD Gothic Neo','Malgun Gothic',sans-serif;background:var(--bg);color:var(--text);font-size:15px;min-height:100vh}
+    a{color:inherit;text-decoration:none}
+
+    /* ── 로그인 화면 ── */
+    .login-wrap{display:flex;align-items:center;justify-content:center;min-height:100vh;padding:20px}
+    .login-box{background:var(--card);border-radius:16px;padding:36px 28px;width:100%;max-width:360px;box-shadow:0 8px 32px rgba(0,0,0,.1)}
+    .login-logo{font-size:20px;font-weight:800;color:var(--primary);margin-bottom:6px}
+    .login-sub{font-size:13px;color:var(--muted);margin-bottom:28px}
+    .login-box input{width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:var(--r);font-size:15px;margin-bottom:12px}
+    .login-box input:focus{outline:none;border-color:var(--primary)}
+    .btn-primary{width:100%;padding:13px;background:var(--primary);color:#fff;border:none;border-radius:var(--r);font-size:15px;font-weight:700;cursor:pointer}
+    .btn-primary:hover{background:#1560a8}
+    .login-error{color:var(--danger);font-size:13px;margin-top:8px;display:none}
+
+    /* ── 관리자 레이아웃 ── */
+    #admin-wrap{display:none}
+    .admin-header{background:var(--primary);color:#fff;padding:0 20px;height:56px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+    .admin-header .logo{font-size:17px;font-weight:800}
+    .admin-header .logout-btn{background:rgba(255,255,255,.2);border:none;color:#fff;padding:6px 14px;border-radius:6px;cursor:pointer;font-size:13px}
+    .admin-main{max-width:700px;margin:0 auto;padding:24px 16px 60px}
+
+    /* 탭 */
+    .tab-bar{display:flex;gap:0;background:var(--card);border-radius:var(--r);overflow:hidden;border:1px solid var(--border);margin-bottom:20px}
+    .tab{flex:1;text-align:center;padding:11px;font-size:14px;font-weight:700;color:var(--muted);cursor:pointer;border-bottom:3px solid transparent;transition:.2s}
+    .tab.active{color:var(--primary);border-bottom-color:var(--primary);background:#f0f4fb}
+
+    /* 카드 */
+    .card{background:var(--card);border-radius:var(--r);border:1px solid var(--border);padding:20px;margin-bottom:16px}
+    .card-title{font-size:16px;font-weight:800;margin-bottom:16px;color:var(--primary)}
+
+    /* 폼 */
+    .form-group{margin-bottom:14px}
+    .form-group label{display:block;font-size:13px;font-weight:700;margin-bottom:5px;color:var(--text)}
+    .form-group input,
+    .form-group select,
+    .form-group textarea{width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:14px;font-family:inherit}
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus{outline:none;border-color:var(--primary)}
+    .form-group textarea{min-height:90px;resize:vertical}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .form-hint{font-size:11px;color:var(--muted);margin-top:4px}
+    .btn-submit{width:100%;padding:13px;background:var(--accent);color:#fff;border:none;border-radius:var(--r);font-size:15px;font-weight:800;cursor:pointer;margin-top:8px}
+    .btn-submit:hover{background:#d49018}
+    .btn-submit:disabled{background:#ccc;cursor:not-allowed}
+
+    /* 알림 */
+    .alert{padding:12px 16px;border-radius:var(--r);font-size:14px;margin-bottom:16px;display:none}
+    .alert.success{background:#e8f5e9;color:var(--success);border:1px solid #a5d6a7}
+    .alert.error{background:#ffebee;color:var(--danger);border:1px solid #ef9a9a}
+
+    /* 사례 목록 */
+    .case-item{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:14px;margin-bottom:10px}
+    .case-item-header{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+    .case-item-title{font-size:14px;font-weight:700}
+    .case-item-meta{font-size:12px;color:var(--muted);margin-top:4px}
+    .badge{display:inline-block;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:700;background:#e8f0fb;color:var(--primary)}
+    .btn-delete{background:none;border:1px solid var(--danger);color:var(--danger);padding:4px 10px;border-radius:6px;font-size:12px;cursor:pointer;white-space:nowrap}
+    .btn-delete:hover{background:var(--danger);color:#fff}
+    .empty{text-align:center;padding:30px;color:var(--muted);font-size:14px}
+
+    /* 이미지 미리보기 */
+    .img-preview{width:100%;aspect-ratio:16/9;background:#f5f5f5;border-radius:8px;overflow:hidden;margin-top:8px;display:none}
+    .img-preview img{width:100%;height:100%;object-fit:cover}
+
+    /* 설정 탭 */
+    .env-table{width:100%;border-collapse:collapse;font-size:13px}
+    .env-table th,.env-table td{padding:10px 12px;border:1px solid var(--border);text-align:left}
+    .env-table th{background:#f5f7fa;font-weight:700}
+    .env-table code{background:#f0f0f0;padding:2px 6px;border-radius:4px;font-size:12px}
+    .step{counter-increment:step;display:flex;gap:12px;margin-bottom:14px}
+    .step-num{min-width:28px;height:28px;background:var(--primary);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800}
+    .step-body{font-size:14px;line-height:1.6}
+    .step-body strong{display:block;font-weight:700;margin-bottom:2px}
+  </style>
+</head>
+<body>
+
+<!-- ── 로그인 ── -->
+<div class="login-wrap" id="login-wrap">
+  <div class="login-box">
+    <div class="login-logo">✦ 스마트디자인</div>
+    <div class="login-sub">관리자 페이지에 로그인하세요</div>
+    <input type="password" id="pw-input" placeholder="비밀번호 입력" autocomplete="current-password" />
+    <button class="btn-primary" id="login-btn">로그인</button>
+    <div class="login-error" id="login-error">비밀번호가 틀렸습니다.</div>
+  </div>
+</div>
+
+<!-- ── 관리자 본체 ── -->
+<div id="admin-wrap">
+  <div class="admin-header">
+    <div class="logo">✦ 스마트디자인 관리자</div>
+    <button class="logout-btn" id="logout-btn">로그아웃</button>
+  </div>
+
+  <div class="admin-main">
+    <!-- 탭 -->
+    <div class="tab-bar">
+      <div class="tab active" data-tab="add">📷 사례 추가</div>
+      <div class="tab" data-tab="list">📋 사례 목록</div>
+      <div class="tab" data-tab="setup">⚙️ 설정 안내</div>
+    </div>
+
+    <!-- 알림 -->
+    <div class="alert success" id="alert-success"></div>
+    <div class="alert error"   id="alert-error"></div>
+
+    <!-- ── 탭 1: 사례 추가 ── -->
+    <div id="tab-add">
+      <div class="card">
+        <div class="card-title">새 시공 사례 추가</div>
+        <form id="case-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label>출장 지역 *</label>
+              <input type="text" id="f-location" placeholder="예: 강동구 천호동" required />
+            </div>
+            <div class="form-group">
+              <label>서비스 *</label>
+              <select id="f-service" required>
+                <option value="">선택</option>
+                <option value="변기교체">변기교체</option>
+                <option value="세면대수전교체">세면대수전교체</option>
+                <option value="싱크대수전교체">싱크대수전교체</option>
+                <option value="샤워기수전교체">샤워기수전교체</option>
+                <option value="환풍기교체">환풍기교체</option>
+                <option value="긴급집수리">긴급집수리</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>제목 *</label>
+            <input type="text" id="f-title" placeholder="예: 강동구 천호동 변기 교체 시공" required />
+          </div>
+
+          <div class="form-group">
+            <label>시공 내용 *</label>
+            <textarea id="f-desc" placeholder="시공 내용, 특이사항 등을 적어주세요" required></textarea>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>시공일</label>
+              <input type="date" id="f-date" />
+            </div>
+            <div class="form-group">
+              <label>태그 (쉼표로 구분)</label>
+              <input type="text" id="f-tags" placeholder="예: 변기교체, 천호동, 당일시공" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>이미지 URL (선택)</label>
+            <input type="url" id="f-image" placeholder="https://..." />
+            <div class="form-hint">이미지를 imgur, Cloudinary 등에 업로드한 후 URL을 붙여넣으세요</div>
+            <div class="img-preview" id="img-preview"><img id="img-preview-img" src="" alt="미리보기" /></div>
+          </div>
+
+          <button type="submit" class="btn-submit" id="submit-btn">✅ 사례 저장하기</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- ── 탭 2: 사례 목록 ── -->
+    <div id="tab-list" style="display:none">
+      <div class="card">
+        <div class="card-title">등록된 시공 사례 <span id="case-count" style="font-weight:400;font-size:14px;color:var(--muted)"></span></div>
+        <div id="case-list-wrap"><div class="empty">⏳ 불러오는 중...</div></div>
+      </div>
+    </div>
+
+    <!-- ── 탭 3: 설정 안내 ── -->
+    <div id="tab-setup" style="display:none">
+      <div class="card">
+        <div class="card-title">⚙️ Netlify 환경변수 설정 방법</div>
+        <div style="font-size:13px;color:var(--muted);margin-bottom:16px">
+          아래 4개 환경변수를 Netlify에 설정해야 사례 저장 기능이 작동합니다.
+        </div>
+
+        <table class="env-table">
+          <tr><th>변수명</th><th>값 예시</th><th>설명</th></tr>
+          <tr><td><code>ADMIN_PASS</code></td><td>smartdesign2026</td><td>이 페이지 로그인 비밀번호</td></tr>
+          <tr><td><code>GITHUB_TOKEN</code></td><td>ghp_xxxx...</td><td>GitHub PAT (아래 발급 방법 참고)</td></tr>
+          <tr><td><code>GITHUB_OWNER</code></td><td>1485-testing</td><td>GitHub 사용자명</td></tr>
+          <tr><td><code>GITHUB_REPO</code></td><td>1485-testing</td><td>레포지토리 이름</td></tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <div class="card-title">🔑 GitHub Personal Access Token 발급</div>
+        <div style="counter-reset:step">
+          <div class="step"><div class="step-num">1</div><div class="step-body"><strong>GitHub → Settings → Developer settings</strong>로 이동</div></div>
+          <div class="step"><div class="step-num">2</div><div class="step-body"><strong>Personal access tokens → Fine-grained tokens → Generate new token</strong> 클릭</div></div>
+          <div class="step"><div class="step-num">3</div><div class="step-body"><strong>Repository access</strong>: 1485-testing 레포 선택<br>Permissions에서 <strong>Contents → Read and write</strong> 선택</div></div>
+          <div class="step"><div class="step-num">4</div><div class="step-body"><strong>Generate token</strong> 클릭 후 토큰 복사 → Netlify 환경변수에 붙여넣기</div></div>
+          <div class="step"><div class="step-num">5</div><div class="step-body"><strong>Netlify → Site settings → Environment variables → Add variable</strong>에서 4개 변수 입력 후 <strong>Save</strong> → <strong>Trigger deploy</strong></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const FUNC_URL = '/.netlify/functions/add-case';
+let adminPass = '';
+let allCases  = [];
+
+// ── 로그인 ──
+function tryLogin() {
+  const pw = document.getElementById('pw-input').value.trim();
+  if (!pw) return;
+  // 비밀번호는 서버에서 검증하므로 일단 저장 후 진입
+  adminPass = pw;
+  document.getElementById('login-wrap').style.display = 'none';
+  document.getElementById('admin-wrap').style.display = 'block';
+  setDefaultDate();
+  loadCases();
+}
+
+document.getElementById('login-btn').addEventListener('click', tryLogin);
+document.getElementById('pw-input').addEventListener('keydown', e => { if (e.key === 'Enter') tryLogin(); });
+document.getElementById('logout-btn').addEventListener('click', () => {
+  adminPass = '';
+  document.getElementById('login-wrap').style.display = 'flex';
+  document.getElementById('admin-wrap').style.display = 'none';
+  document.getElementById('pw-input').value = '';
+});
+
+// ── 탭 전환 ──
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    ['add','list','setup'].forEach(id => {
+      document.getElementById('tab-' + id).style.display = id === tab.dataset.tab ? 'block' : 'none';
+    });
+    if (tab.dataset.tab === 'list') loadCases();
+  });
+});
+
+// ── 날짜 기본값 ──
+function setDefaultDate() {
+  const today = new Date().toISOString().split('T')[0];
+  document.getElementById('f-date').value = today;
+}
+
+// ── 이미지 미리보기 ──
+document.getElementById('f-image').addEventListener('input', e => {
+  const url = e.target.value.trim();
+  const preview = document.getElementById('img-preview');
+  const img     = document.getElementById('img-preview-img');
+  if (url) { img.src = url; preview.style.display = 'block'; }
+  else     { preview.style.display = 'none'; }
+});
+
+// ── 지역+서비스 → 제목 자동완성 ──
+function autoTitle() {
+  const loc = document.getElementById('f-location').value.trim();
+  const svc = document.getElementById('f-service').value;
+  const title = document.getElementById('f-title');
+  if (loc && svc && !title.value) title.value = `${loc} ${svc} 시공`;
+}
+document.getElementById('f-location').addEventListener('blur', autoTitle);
+document.getElementById('f-service').addEventListener('change', autoTitle);
+
+// ── 알림 표시 ──
+function showAlert(type, msg) {
+  ['success','error'].forEach(t => {
+    const el = document.getElementById('alert-' + t);
+    el.style.display = 'none';
+  });
+  const el = document.getElementById('alert-' + type);
+  el.textContent = msg;
+  el.style.display = 'block';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  setTimeout(() => { el.style.display = 'none'; }, 6000);
+}
+
+// ── 사례 저장 ──
+document.getElementById('case-form').addEventListener('submit', async e => {
+  e.preventDefault();
+  const btn = document.getElementById('submit-btn');
+  btn.disabled = true;
+  btn.textContent = '저장 중...';
+
+  const caseData = {
+    title:       document.getElementById('f-title').value.trim(),
+    location:    document.getElementById('f-location').value.trim(),
+    service:     document.getElementById('f-service').value,
+    date:        document.getElementById('f-date').value,
+    description: document.getElementById('f-desc').value.trim(),
+    tags:        document.getElementById('f-tags').value,
+    image:       document.getElementById('f-image').value.trim(),
+  };
+
+  try {
+    const res  = await fetch(FUNC_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ password: adminPass, caseData }),
+    });
+    const data = await res.json();
+
+    if (res.ok && data.success) {
+      showAlert('success', '✅ ' + data.message);
+      document.getElementById('case-form').reset();
+      setDefaultDate();
+      document.getElementById('img-preview').style.display = 'none';
+    } else {
+      if (res.status === 401) {
+        showAlert('error', '❌ 비밀번호가 틀렸습니다. 로그아웃 후 다시 로그인하세요.');
+      } else {
+        showAlert('error', '❌ ' + (data.error || '저장 실패'));
+      }
+    }
+  } catch (err) {
+    showAlert('error', '❌ 네트워크 오류: ' + err.message);
+  }
+
+  btn.disabled = false;
+  btn.textContent = '✅ 사례 저장하기';
+});
+
+// ── 사례 목록 로드 ──
+async function loadCases() {
+  try {
+    const res = await fetch('/data/cases.json?t=' + Date.now());
+    allCases  = await res.json();
+    renderCaseList();
+  } catch {
+    document.getElementById('case-list-wrap').innerHTML = '<div class="empty">불러오기 실패</div>';
+  }
+}
+
+function renderCaseList() {
+  const wrap  = document.getElementById('case-list-wrap');
+  const count = document.getElementById('case-count');
+  count.textContent = `(${allCases.length}개)`;
+
+  if (!allCases.length) {
+    wrap.innerHTML = '<div class="empty">등록된 사례가 없습니다.</div>';
+    return;
+  }
+
+  wrap.innerHTML = allCases.map(c => `
+    <div class="case-item">
+      <div class="case-item-header">
+        <div>
+          <div class="case-item-title">${c.title}</div>
+          <div class="case-item-meta">📍 ${c.location} &nbsp;|&nbsp; ${c.date} &nbsp;<span class="badge">${c.service}</span></div>
+        </div>
+      </div>
+      ${c.description ? `<div style="font-size:13px;color:var(--muted);margin-top:8px">${c.description}</div>` : ''}
+    </div>
+  `).join('');
+}
+</script>
+</body>
+</html>

@@ -5,60 +5,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>시공 사례 | 스마트디자인 강동구 집수리</title>
   <meta name="description" content="스마트디자인 강동구 변기교체·수전교체·환풍기교체 실제 시공 사례 모음. 천호동, 성내동, 길동, 암사동 등 현장 사례." />
-  <link rel="canonical" href="https://smart-designhome.netlify.app/cases/" />
+  <link rel="canonical" href="https://1485testing.netlify.app/cases/" />
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type":"ListItem","position":1,"name":"홈","item":"https://smart-designhome.netlify.app/"},
-      {"@type":"ListItem","position":2,"name":"시공 사례","item":"https://smart-designhome.netlify.app/cases/"}
-    ]
-  }
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://1485testing.netlify.app/"},{"@type":"ListItem","position":2,"name":"시공 사례","item":"https://1485testing.netlify.app/cases/"}]}
   </script>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{--primary:#1a4f8a;--accent:#e8a020;--bg:#f9f9f7;--card:#fff;--text:#222;--muted:#666;--border:#e0e0e0;--r:10px}
+    :root{--bg:#111111;--surface:#1c1c1c;--surface2:#242424;--border:#2e2e2e;--text:#f0f0f0;--muted:#888;--muted2:#555;--accent:#e8472e;--accent-dim:#b53520;--white:#ffffff}
     body{font-family:'Apple SD Gothic Neo','Malgun Gothic',sans-serif;background:var(--bg);color:var(--text);font-size:15px;line-height:1.65}
     a{color:inherit;text-decoration:none}
-    header{background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 16px;height:56px;position:sticky;top:0;z-index:100}
-    .logo{font-size:17px;font-weight:800}
-    .header-cta{background:var(--accent);color:#fff;padding:7px 14px;border-radius:6px;font-weight:700;font-size:13px}
-    .page-tabs{display:flex;border-bottom:2px solid var(--border);background:var(--card);position:sticky;top:56px;z-index:90}
-    .page-tab{flex:1;text-align:center;padding:12px 8px;font-size:13px;font-weight:700;color:var(--muted);border-bottom:3px solid transparent}
-    .page-tab.active{color:var(--primary);border-bottom-color:var(--primary)}
-    .page-hero{background:linear-gradient(135deg,#1a4f8a,#0d3060);color:#fff;padding:28px 20px 24px;text-align:center}
-    .page-hero h1{font-size:20px;font-weight:800;margin-bottom:6px}
-    .page-hero p{font-size:13px;opacity:.8}
+    header{background:rgba(17,17,17,.95);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:space-between;padding:0 20px;height:58px;position:sticky;top:0;z-index:100;border-bottom:1px solid var(--border)}
+    .logo{font-size:18px;font-weight:900;letter-spacing:-0.5px;color:var(--white)}
+    .logo span{color:var(--accent)}
+    .header-cta{background:var(--accent);color:var(--white);padding:7px 14px;border-radius:6px;font-weight:700;font-size:13px}
+    .page-tabs{display:flex;background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:58px;z-index:90}
+    .page-tab{flex:1;text-align:center;padding:12px 8px;font-size:13px;font-weight:700;color:var(--muted);border-bottom:2px solid transparent;transition:.15s}
+    .page-tab.active{color:var(--white);border-bottom-color:var(--accent)}
+    .page-hero{background:var(--bg);padding:36px 20px 30px;border-bottom:1px solid var(--border)}
+    .hero-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(232,71,46,.12);border:1px solid rgba(232,71,46,.3);color:var(--accent);font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:14px}
+    .hero-tag::before{content:'●';font-size:7px}
+    .page-hero h1{font-size:24px;font-weight:900;color:var(--white);letter-spacing:-0.3px;margin-bottom:6px}
+    .page-hero p{font-size:14px;color:var(--muted)}
     main{padding:20px 16px}
-    .filter-bar{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;margin-bottom:16px;-webkit-overflow-scrolling:touch}
-    .filter-bar::-webkit-scrollbar{height:3px}
-    .filter-btn{white-space:nowrap;padding:7px 14px;border-radius:20px;font-size:13px;font-weight:600;border:1.5px solid var(--border);background:var(--card);cursor:pointer;transition:.2s}
-    .filter-btn.active{background:var(--primary);color:#fff;border-color:var(--primary)}
-    #cases-list{display:grid;gap:14px}
-    .case-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
-    .case-img{width:100%;aspect-ratio:16/9;background:linear-gradient(135deg,#dde3ed,#c8d4e8);display:flex;align-items:center;justify-content:center;font-size:36px;color:var(--muted)}
-    .case-body{padding:14px}
+    .filter-bar{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;margin-bottom:20px;-webkit-overflow-scrolling:touch}
+    .filter-bar::-webkit-scrollbar{height:2px;background:var(--border)}
+    .filter-bar::-webkit-scrollbar-thumb{background:var(--accent)}
+    .filter-btn{white-space:nowrap;padding:7px 14px;border-radius:6px;font-size:13px;font-weight:600;border:1px solid var(--border);background:var(--surface);color:var(--muted);cursor:pointer;transition:.15s}
+    .filter-btn.active{background:var(--accent);color:var(--white);border-color:var(--accent)}
+    .filter-btn:hover:not(.active){border-color:var(--accent);color:var(--text)}
+    #cases-list{display:grid;gap:12px}
+    .case-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:.15s}
+    .case-card:hover{border-color:var(--accent)}
+    .case-img{width:100%;aspect-ratio:16/9;background:var(--surface2);display:flex;align-items:center;justify-content:center;font-size:42px}
+    .case-body{padding:16px}
     .case-meta{display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap}
-    .case-badge{display:inline-block;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700;background:#e8f0fb;color:var(--primary)}
-    .case-date{font-size:11px;color:var(--muted)}
-    .case-title{font-size:15px;font-weight:800;margin-bottom:6px}
+    .case-badge{display:inline-block;padding:3px 10px;border-radius:4px;font-size:11px;font-weight:700;background:rgba(232,71,46,.12);color:var(--accent)}
+    .case-date{font-size:11px;color:var(--muted2)}
+    .case-title{font-size:15px;font-weight:800;color:var(--white);margin-bottom:6px}
     .case-location{font-size:12px;color:var(--muted);margin-bottom:8px}
-    .case-desc{font-size:13px;color:var(--muted);line-height:1.6}
+    .case-desc{font-size:13px;color:var(--muted);line-height:1.7}
     .case-tags{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}
-    .tag-chip{font-size:11px;padding:3px 8px;background:#f0f0f0;border-radius:4px;color:var(--muted)}
+    .tag-chip{font-size:11px;padding:3px 8px;background:var(--surface2);border:1px solid var(--border);border-radius:4px;color:var(--muted2)}
     .empty-state{text-align:center;padding:40px 20px;color:var(--muted);font-size:14px}
-    .cta-bottom{background:linear-gradient(135deg,#1a4f8a,#0d3060);border-radius:var(--r);padding:20px;text-align:center;color:#fff;margin-top:20px}
-    .cta-bottom p{font-size:13px;margin-bottom:12px;opacity:.85}
-    .cta-bottom a{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;padding:13px 24px;border-radius:50px;font-size:18px;font-weight:800}
-    footer{background:#1a1a1a;color:rgba(255,255,255,.6);padding:24px 20px;font-size:12px;text-align:center;line-height:2;margin-top:24px}
-    footer strong{color:#fff;font-size:14px;display:block;margin-bottom:4px}
+    .cta-bottom{background:var(--accent);border-radius:10px;padding:24px 20px;text-align:center;margin-top:20px}
+    .cta-bottom p{font-size:13px;color:rgba(255,255,255,.85);margin-bottom:14px;word-break:keep-all}
+    .cta-bottom a{display:inline-flex;align-items:center;gap:8px;background:var(--white);color:var(--accent);padding:13px 28px;border-radius:8px;font-size:20px;font-weight:900}
+    footer{background:#0a0a0a;border-top:1px solid var(--border);padding:28px 20px;font-size:12px;text-align:center;line-height:2.1;margin-top:24px;color:var(--muted2)}
+    .footer-logo{font-size:18px;font-weight:900;color:var(--white);margin-bottom:10px}
+    .footer-logo span{color:var(--accent)}
   </style>
 </head>
 <body>
 
 <header>
-  <div class="logo">✦ 스마트디자인</div>
+  <div class="logo">스마트<span>디자인</span></div>
   <a href="tel:010-5064-2342" class="header-cta">📞 긴급상담</a>
 </header>
 
@@ -69,12 +69,12 @@
 </div>
 
 <div class="page-hero">
-  <h1>📷 시공 사례</h1>
+  <div class="hero-tag">실제 시공 현장</div>
+  <h1>시공 사례</h1>
   <p>스마트디자인 강동구 실제 시공 현장 기록</p>
 </div>
 
 <main>
-  <!-- 필터 버튼 -->
   <div class="filter-bar">
     <button class="filter-btn active" data-filter="전체">전체</button>
     <button class="filter-btn" data-filter="변기교체">변기교체</button>
@@ -84,90 +84,60 @@
     <button class="filter-btn" data-filter="샤워기수전교체">샤워기수전</button>
   </div>
 
-  <!-- 사례 카드 목록 -->
-  <div id="cases-list">
-    <div class="empty-state">⏳ 불러오는 중...</div>
-  </div>
+  <div id="cases-list"><div class="empty-state">⏳ 불러오는 중...</div></div>
 
   <div class="cta-bottom">
-    <p>✦ 시공 문의는 24시 전화 상담으로 빠르게!</p>
+    <p>시공 문의는 24시 전화 상담으로 빠르게!</p>
     <a href="tel:010-5064-2342">📞 010-5064-2342</a>
   </div>
 </main>
 
 <footer>
-  <strong>스마트디자인</strong>
+  <div class="footer-logo">스마트<span>디자인</span></div>
   대표자: 함종록 | 사업자: 427-05-01489<br>
   경기도 하남시 대청로 59번길 15 | 010-5064-2342<br>
   © 2026 스마트디자인.
 </footer>
 
 <script>
-// ── 서비스 아이콘 맵 ──
-const svcIcon = {
-  '변기교체': '🚽',
-  '세면대수전교체': '🪣',
-  '싱크대수전교체': '🍳',
-  '샤워기수전교체': '🚿',
-  '환풍기교체': '💨',
-};
+const svcIcon={'변기교체':'🚽','세면대수전교체':'🪣','싱크대수전교체':'🍳','샤워기수전교체':'🚿','환풍기교체':'💨'};
+let allCases=[];
+let currentFilter='전체';
 
-let allCases = [];
-let currentFilter = '전체';
-
-// ── cases.json 로드 ──
-async function loadCases() {
-  try {
-    const res = await fetch('/data/cases.json');
-    allCases = await res.json();
+async function loadCases(){
+  try{
+    const res=await fetch('/data/cases.json');
+    allCases=await res.json();
     renderCases(allCases);
-  } catch (e) {
-    document.getElementById('cases-list').innerHTML =
-      '<div class="empty-state">😕 사례를 불러올 수 없습니다.</div>';
+  }catch(e){
+    document.getElementById('cases-list').innerHTML='<div class="empty-state">😕 사례를 불러올 수 없습니다.</div>';
   }
 }
 
-function renderCases(cases) {
-  const list = document.getElementById('cases-list');
-  const filtered = currentFilter === '전체'
-    ? cases
-    : cases.filter(c => c.service === currentFilter);
-
-  if (!filtered.length) {
-    list.innerHTML = '<div class="empty-state">해당 카테고리의 사례가 아직 없습니다.</div>';
-    return;
-  }
-
-  // 최신순 정렬
-  const sorted = [...filtered].sort((a, b) => b.date.localeCompare(a.date));
-
-  list.innerHTML = sorted.map(c => `
+function renderCases(cases){
+  const list=document.getElementById('cases-list');
+  const filtered=currentFilter==='전체'?cases:cases.filter(c=>c.service===currentFilter);
+  if(!filtered.length){list.innerHTML='<div class="empty-state">해당 카테고리의 사례가 아직 없습니다.</div>';return;}
+  const sorted=[...filtered].sort((a,b)=>b.date.localeCompare(a.date));
+  list.innerHTML=sorted.map(c=>`
     <article class="case-card">
-      <div class="case-img">${c.image
-        ? `<img src="${c.image}" alt="${c.title}" style="width:100%;height:100%;object-fit:cover">`
-        : (svcIcon[c.service] || '🔧')}</div>
+      <div class="case-img">${c.image?`<img src="${c.image}" alt="${c.title}" style="width:100%;height:100%;object-fit:cover">`:(svcIcon[c.service]||'🔧')}</div>
       <div class="case-body">
-        <div class="case-meta">
-          <span class="case-badge">${c.service}</span>
-          <span class="case-date">${c.date}</span>
-        </div>
+        <div class="case-meta"><span class="case-badge">${c.service}</span><span class="case-date">${c.date}</span></div>
         <div class="case-title">${c.title}</div>
         <div class="case-location">📍 ${c.location}</div>
         <div class="case-desc">${c.description}</div>
-        <div class="case-tags">
-          ${c.tags.map(t => `<span class="tag-chip">#${t}</span>`).join('')}
-        </div>
+        <div class="case-tags">${c.tags.map(t=>`<span class="tag-chip">#${t}</span>`).join('')}</div>
       </div>
     </article>
   `).join('');
 }
 
-// ── 필터 버튼 ──
-document.querySelectorAll('.filter-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+document.querySelectorAll('.filter-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
     btn.classList.add('active');
-    currentFilter = btn.dataset.filter;
+    currentFilter=btn.dataset.filter;
     renderCases(allCases);
   });
 });

@@ -1,62 +1,472 @@
 [
-  {"id":"kw-001","location":"강동구 천호동","service":"변기교체","slug":"강동구-천호동-변기교체","used":false},
-  {"id":"kw-002","location":"강동구 천호동","service":"수전교체","slug":"강동구-천호동-수전교체","used":false},
-  {"id":"kw-003","location":"강동구 천호동","service":"환풍기교체","slug":"강동구-천호동-환풍기교체","used":false},
-  {"id":"kw-004","location":"강동구 천호동","service":"세면대교체","slug":"강동구-천호동-세면대교체","used":false},
-  {"id":"kw-005","location":"강동구 천호동","service":"싱크대수전","slug":"강동구-천호동-싱크대수전","used":false},
-  {"id":"kw-006","location":"강동구 성내동","service":"변기교체","slug":"강동구-성내동-변기교체","used":false},
-  {"id":"kw-007","location":"강동구 성내동","service":"수전교체","slug":"강동구-성내동-수전교체","used":false},
-  {"id":"kw-008","location":"강동구 성내동","service":"환풍기교체","slug":"강동구-성내동-환풍기교체","used":false},
-  {"id":"kw-009","location":"강동구 성내동","service":"세면대교체","slug":"강동구-성내동-세면대교체","used":false},
-  {"id":"kw-010","location":"강동구 성내동","service":"싱크대수전","slug":"강동구-성내동-싱크대수전","used":false},
-  {"id":"kw-011","location":"강동구 길동","service":"변기교체","slug":"강동구-길동-변기교체","used":false},
-  {"id":"kw-012","location":"강동구 길동","service":"수전교체","slug":"강동구-길동-수전교체","used":false},
-  {"id":"kw-013","location":"강동구 길동","service":"환풍기교체","slug":"강동구-길동-환풍기교체","used":false},
-  {"id":"kw-014","location":"강동구 길동","service":"세면대교체","slug":"강동구-길동-세면대교체","used":false},
-  {"id":"kw-015","location":"강동구 길동","service":"싱크대수전","slug":"강동구-길동-싱크대수전","used":false},
-  {"id":"kw-016","location":"강동구 암사동","service":"변기교체","slug":"강동구-암사동-변기교체","used":false},
-  {"id":"kw-017","location":"강동구 암사동","service":"수전교체","slug":"강동구-암사동-수전교체","used":false},
-  {"id":"kw-018","location":"강동구 암사동","service":"환풍기교체","slug":"강동구-암사동-환풍기교체","used":false},
-  {"id":"kw-019","location":"강동구 암사동","service":"세면대교체","slug":"강동구-암사동-세면대교체","used":false},
-  {"id":"kw-020","location":"강동구 암사동","service":"싱크대수전","slug":"강동구-암사동-싱크대수전","used":false},
-  {"id":"kw-021","location":"강동구 명일동","service":"변기교체","slug":"강동구-명일동-변기교체","used":false},
-  {"id":"kw-022","location":"강동구 명일동","service":"수전교체","slug":"강동구-명일동-수전교체","used":false},
-  {"id":"kw-023","location":"강동구 명일동","service":"환풍기교체","slug":"강동구-명일동-환풍기교체","used":false},
-  {"id":"kw-024","location":"강동구 명일동","service":"세면대교체","slug":"강동구-명일동-세면대교체","used":false},
-  {"id":"kw-025","location":"강동구 명일동","service":"싱크대수전","slug":"강동구-명일동-싱크대수전","used":false},
-  {"id":"kw-026","location":"강동구 고덕동","service":"변기교체","slug":"강동구-고덕동-변기교체","used":false},
-  {"id":"kw-027","location":"강동구 고덕동","service":"수전교체","slug":"강동구-고덕동-수전교체","used":false},
-  {"id":"kw-028","location":"강동구 고덕동","service":"환풍기교체","slug":"강동구-고덕동-환풍기교체","used":false},
-  {"id":"kw-029","location":"강동구 고덕동","service":"세면대교체","slug":"강동구-고덕동-세면대교체","used":false},
-  {"id":"kw-030","location":"강동구 고덕동","service":"싱크대수전","slug":"강동구-고덕동-싱크대수전","used":false},
-  {"id":"kw-031","location":"강동구 상일동","service":"변기교체","slug":"강동구-상일동-변기교체","used":false},
-  {"id":"kw-032","location":"강동구 상일동","service":"수전교체","slug":"강동구-상일동-수전교체","used":false},
-  {"id":"kw-033","location":"강동구 상일동","service":"환풍기교체","slug":"강동구-상일동-환풍기교체","used":false},
-  {"id":"kw-034","location":"강동구 강일동","service":"변기교체","slug":"강동구-강일동-변기교체","used":false},
-  {"id":"kw-035","location":"강동구 강일동","service":"수전교체","slug":"강동구-강일동-수전교체","used":false},
-  {"id":"kw-036","location":"강동구 강일동","service":"환풍기교체","slug":"강동구-강일동-환풍기교체","used":false},
-  {"id":"kw-037","location":"강동구 둔촌동","service":"변기교체","slug":"강동구-둔촌동-변기교체","used":false},
-  {"id":"kw-038","location":"강동구 둔촌동","service":"수전교체","slug":"강동구-둔촌동-수전교체","used":false},
-  {"id":"kw-039","location":"강동구 둔촌동","service":"환풍기교체","slug":"강동구-둔촌동-환풍기교체","used":false},
-  {"id":"kw-040","location":"강동구 풍납동","service":"변기교체","slug":"강동구-풍납동-변기교체","used":false},
-  {"id":"kw-041","location":"강동구 풍납동","service":"수전교체","slug":"강동구-풍납동-수전교체","used":false},
-  {"id":"kw-042","location":"강동구 풍납동","service":"환풍기교체","slug":"강동구-풍납동-환풍기교체","used":false},
-  {"id":"kw-043","location":"하남시 신장동","service":"변기교체","slug":"하남시-신장동-변기교체","used":false},
-  {"id":"kw-044","location":"하남시 신장동","service":"수전교체","slug":"하남시-신장동-수전교체","used":false},
-  {"id":"kw-045","location":"하남시 신장동","service":"환풍기교체","slug":"하남시-신장동-환풍기교체","used":false},
-  {"id":"kw-046","location":"하남시 미사동","service":"변기교체","slug":"하남시-미사동-변기교체","used":false},
-  {"id":"kw-047","location":"하남시 미사동","service":"수전교체","slug":"하남시-미사동-수전교체","used":false},
-  {"id":"kw-048","location":"하남시 미사동","service":"환풍기교체","slug":"하남시-미사동-환풍기교체","used":false},
-  {"id":"kw-049","location":"송파구 방이동","service":"변기교체","slug":"송파구-방이동-변기교체","used":false},
-  {"id":"kw-050","location":"송파구 방이동","service":"수전교체","slug":"송파구-방이동-수전교체","used":false},
-  {"id":"kw-051","location":"송파구 거여동","service":"변기교체","slug":"송파구-거여동-변기교체","used":false},
-  {"id":"kw-052","location":"송파구 거여동","service":"환풍기교체","slug":"송파구-거여동-환풍기교체","used":false},
-  {"id":"kw-053","location":"광진구 구의동","service":"변기교체","slug":"광진구-구의동-변기교체","used":false},
-  {"id":"kw-054","location":"광진구 구의동","service":"수전교체","slug":"광진구-구의동-수전교체","used":false},
-  {"id":"kw-055","location":"광진구 화양동","service":"환풍기교체","slug":"광진구-화양동-환풍기교체","used":false},
-  {"id":"kw-056","location":"강동구 천호동","service":"샤워기수전교체","slug":"강동구-천호동-샤워기수전교체","used":false},
-  {"id":"kw-057","location":"강동구 성내동","service":"샤워기수전교체","slug":"강동구-성내동-샤워기수전교체","used":false},
-  {"id":"kw-058","location":"강동구 길동","service":"샤워기수전교체","slug":"강동구-길동-샤워기수전교체","used":false},
-  {"id":"kw-059","location":"강동구 암사동","service":"샤워기수전교체","slug":"강동구-암사동-샤워기수전교체","used":false},
-  {"id":"kw-060","location":"강동구 명일동","service":"샤워기수전교체","slug":"강동구-명일동-샤워기수전교체","used":false}
+  {
+    "id": "kw-001",
+    "location": "강동구 천호동",
+    "service": "변기교체",
+    "slug": "강동구-천호동-변기교체",
+    "used": true,
+    "usedDate": "2026-06-11"
+  },
+  {
+    "id": "kw-002",
+    "location": "강동구 천호동",
+    "service": "수전교체",
+    "slug": "강동구-천호동-수전교체",
+    "used": true,
+    "usedDate": "2026-06-12"
+  },
+  {
+    "id": "kw-003",
+    "location": "강동구 천호동",
+    "service": "환풍기교체",
+    "slug": "강동구-천호동-환풍기교체",
+    "used": true,
+    "usedDate": "2026-06-13"
+  },
+  {
+    "id": "kw-004",
+    "location": "강동구 천호동",
+    "service": "세면대교체",
+    "slug": "강동구-천호동-세면대교체",
+    "used": true,
+    "usedDate": "2026-06-14"
+  },
+  {
+    "id": "kw-005",
+    "location": "강동구 천호동",
+    "service": "싱크대수전",
+    "slug": "강동구-천호동-싱크대수전",
+    "used": true,
+    "usedDate": "2026-06-15"
+  },
+  {
+    "id": "kw-006",
+    "location": "강동구 성내동",
+    "service": "변기교체",
+    "slug": "강동구-성내동-변기교체",
+    "used": true,
+    "usedDate": "2026-06-16"
+  },
+  {
+    "id": "kw-007",
+    "location": "강동구 성내동",
+    "service": "수전교체",
+    "slug": "강동구-성내동-수전교체",
+    "used": true,
+    "usedDate": "2026-06-17"
+  },
+  {
+    "id": "kw-008",
+    "location": "강동구 성내동",
+    "service": "환풍기교체",
+    "slug": "강동구-성내동-환풍기교체",
+    "used": true,
+    "usedDate": "2026-06-18"
+  },
+  {
+    "id": "kw-009",
+    "location": "강동구 성내동",
+    "service": "세면대교체",
+    "slug": "강동구-성내동-세면대교체",
+    "used": true,
+    "usedDate": "2026-06-19"
+  },
+  {
+    "id": "kw-010",
+    "location": "강동구 성내동",
+    "service": "싱크대수전",
+    "slug": "강동구-성내동-싱크대수전",
+    "used": true,
+    "usedDate": "2026-06-20"
+  },
+  {
+    "id": "kw-011",
+    "location": "강동구 길동",
+    "service": "변기교체",
+    "slug": "강동구-길동-변기교체",
+    "used": true,
+    "usedDate": "2026-06-21"
+  },
+  {
+    "id": "kw-012",
+    "location": "강동구 길동",
+    "service": "수전교체",
+    "slug": "강동구-길동-수전교체",
+    "used": true,
+    "usedDate": "2026-06-22"
+  },
+  {
+    "id": "kw-013",
+    "location": "강동구 길동",
+    "service": "환풍기교체",
+    "slug": "강동구-길동-환풍기교체",
+    "used": true,
+    "usedDate": "2026-06-23"
+  },
+  {
+    "id": "kw-014",
+    "location": "강동구 길동",
+    "service": "세면대교체",
+    "slug": "강동구-길동-세면대교체",
+    "used": true,
+    "usedDate": "2026-06-24"
+  },
+  {
+    "id": "kw-015",
+    "location": "강동구 길동",
+    "service": "싱크대수전",
+    "slug": "강동구-길동-싱크대수전",
+    "used": true,
+    "usedDate": "2026-06-25"
+  },
+  {
+    "id": "kw-016",
+    "location": "강동구 암사동",
+    "service": "변기교체",
+    "slug": "강동구-암사동-변기교체",
+    "used": true,
+    "usedDate": "2026-06-26"
+  },
+  {
+    "id": "kw-017",
+    "location": "강동구 암사동",
+    "service": "수전교체",
+    "slug": "강동구-암사동-수전교체",
+    "used": true,
+    "usedDate": "2026-06-27"
+  },
+  {
+    "id": "kw-018",
+    "location": "강동구 암사동",
+    "service": "환풍기교체",
+    "slug": "강동구-암사동-환풍기교체",
+    "used": true,
+    "usedDate": "2026-06-28"
+  },
+  {
+    "id": "kw-019",
+    "location": "강동구 암사동",
+    "service": "세면대교체",
+    "slug": "강동구-암사동-세면대교체",
+    "used": true,
+    "usedDate": "2026-06-29"
+  },
+  {
+    "id": "kw-020",
+    "location": "강동구 암사동",
+    "service": "싱크대수전",
+    "slug": "강동구-암사동-싱크대수전",
+    "used": true,
+    "usedDate": "2026-06-30"
+  },
+  {
+    "id": "kw-021",
+    "location": "강동구 명일동",
+    "service": "변기교체",
+    "slug": "강동구-명일동-변기교체",
+    "used": true,
+    "usedDate": "2026-07-01"
+  },
+  {
+    "id": "kw-022",
+    "location": "강동구 명일동",
+    "service": "수전교체",
+    "slug": "강동구-명일동-수전교체",
+    "used": true,
+    "usedDate": "2026-07-02"
+  },
+  {
+    "id": "kw-023",
+    "location": "강동구 명일동",
+    "service": "환풍기교체",
+    "slug": "강동구-명일동-환풍기교체",
+    "used": true,
+    "usedDate": "2026-07-03"
+  },
+  {
+    "id": "kw-024",
+    "location": "강동구 명일동",
+    "service": "세면대교체",
+    "slug": "강동구-명일동-세면대교체",
+    "used": true,
+    "usedDate": "2026-07-04"
+  },
+  {
+    "id": "kw-025",
+    "location": "강동구 명일동",
+    "service": "싱크대수전",
+    "slug": "강동구-명일동-싱크대수전",
+    "used": true,
+    "usedDate": "2026-07-05"
+  },
+  {
+    "id": "kw-026",
+    "location": "강동구 고덕동",
+    "service": "변기교체",
+    "slug": "강동구-고덕동-변기교체",
+    "used": true,
+    "usedDate": "2026-07-06"
+  },
+  {
+    "id": "kw-027",
+    "location": "강동구 고덕동",
+    "service": "수전교체",
+    "slug": "강동구-고덕동-수전교체",
+    "used": true,
+    "usedDate": "2026-07-07"
+  },
+  {
+    "id": "kw-028",
+    "location": "강동구 고덕동",
+    "service": "환풍기교체",
+    "slug": "강동구-고덕동-환풍기교체",
+    "used": true,
+    "usedDate": "2026-07-08"
+  },
+  {
+    "id": "kw-029",
+    "location": "강동구 고덕동",
+    "service": "세면대교체",
+    "slug": "강동구-고덕동-세면대교체",
+    "used": true,
+    "usedDate": "2026-07-09"
+  },
+  {
+    "id": "kw-030",
+    "location": "강동구 고덕동",
+    "service": "싱크대수전",
+    "slug": "강동구-고덕동-싱크대수전",
+    "used": true,
+    "usedDate": "2026-07-10"
+  },
+  {
+    "id": "kw-031",
+    "location": "강동구 상일동",
+    "service": "변기교체",
+    "slug": "강동구-상일동-변기교체",
+    "used": true,
+    "usedDate": "2026-07-11"
+  },
+  {
+    "id": "kw-032",
+    "location": "강동구 상일동",
+    "service": "수전교체",
+    "slug": "강동구-상일동-수전교체",
+    "used": true,
+    "usedDate": "2026-07-12"
+  },
+  {
+    "id": "kw-033",
+    "location": "강동구 상일동",
+    "service": "환풍기교체",
+    "slug": "강동구-상일동-환풍기교체",
+    "used": true,
+    "usedDate": "2026-07-13"
+  },
+  {
+    "id": "kw-034",
+    "location": "강동구 강일동",
+    "service": "변기교체",
+    "slug": "강동구-강일동-변기교체",
+    "used": true,
+    "usedDate": "2026-07-14"
+  },
+  {
+    "id": "kw-035",
+    "location": "강동구 강일동",
+    "service": "수전교체",
+    "slug": "강동구-강일동-수전교체",
+    "used": true,
+    "usedDate": "2026-07-15"
+  },
+  {
+    "id": "kw-036",
+    "location": "강동구 강일동",
+    "service": "환풍기교체",
+    "slug": "강동구-강일동-환풍기교체",
+    "used": true,
+    "usedDate": "2026-07-16"
+  },
+  {
+    "id": "kw-037",
+    "location": "강동구 둔촌동",
+    "service": "변기교체",
+    "slug": "강동구-둔촌동-변기교체",
+    "used": true,
+    "usedDate": "2026-07-17"
+  },
+  {
+    "id": "kw-038",
+    "location": "강동구 둔촌동",
+    "service": "수전교체",
+    "slug": "강동구-둔촌동-수전교체",
+    "used": true,
+    "usedDate": "2026-07-18"
+  },
+  {
+    "id": "kw-039",
+    "location": "강동구 둔촌동",
+    "service": "환풍기교체",
+    "slug": "강동구-둔촌동-환풍기교체",
+    "used": true,
+    "usedDate": "2026-07-19"
+  },
+  {
+    "id": "kw-040",
+    "location": "강동구 풍납동",
+    "service": "변기교체",
+    "slug": "강동구-풍납동-변기교체",
+    "used": true,
+    "usedDate": "2026-07-20"
+  },
+  {
+    "id": "kw-041",
+    "location": "강동구 풍납동",
+    "service": "수전교체",
+    "slug": "강동구-풍납동-수전교체",
+    "used": true,
+    "usedDate": "2026-07-21"
+  },
+  {
+    "id": "kw-042",
+    "location": "강동구 풍납동",
+    "service": "환풍기교체",
+    "slug": "강동구-풍납동-환풍기교체",
+    "used": true,
+    "usedDate": "2026-07-22"
+  },
+  {
+    "id": "kw-043",
+    "location": "하남시 신장동",
+    "service": "변기교체",
+    "slug": "하남시-신장동-변기교체",
+    "used": true,
+    "usedDate": "2026-07-23"
+  },
+  {
+    "id": "kw-044",
+    "location": "하남시 신장동",
+    "service": "수전교체",
+    "slug": "하남시-신장동-수전교체",
+    "used": true,
+    "usedDate": "2026-07-24"
+  },
+  {
+    "id": "kw-045",
+    "location": "하남시 신장동",
+    "service": "환풍기교체",
+    "slug": "하남시-신장동-환풍기교체",
+    "used": true,
+    "usedDate": "2026-07-25"
+  },
+  {
+    "id": "kw-046",
+    "location": "하남시 미사동",
+    "service": "변기교체",
+    "slug": "하남시-미사동-변기교체",
+    "used": true,
+    "usedDate": "2026-07-26"
+  },
+  {
+    "id": "kw-047",
+    "location": "하남시 미사동",
+    "service": "수전교체",
+    "slug": "하남시-미사동-수전교체",
+    "used": true,
+    "usedDate": "2026-07-27"
+  },
+  {
+    "id": "kw-048",
+    "location": "하남시 미사동",
+    "service": "환풍기교체",
+    "slug": "하남시-미사동-환풍기교체",
+    "used": true,
+    "usedDate": "2026-07-28"
+  },
+  {
+    "id": "kw-049",
+    "location": "송파구 방이동",
+    "service": "변기교체",
+    "slug": "송파구-방이동-변기교체",
+    "used": true,
+    "usedDate": "2026-07-29"
+  },
+  {
+    "id": "kw-050",
+    "location": "송파구 방이동",
+    "service": "수전교체",
+    "slug": "송파구-방이동-수전교체",
+    "used": true,
+    "usedDate": "2026-07-30"
+  },
+  {
+    "id": "kw-051",
+    "location": "송파구 거여동",
+    "service": "변기교체",
+    "slug": "송파구-거여동-변기교체",
+    "used": false
+  },
+  {
+    "id": "kw-052",
+    "location": "송파구 거여동",
+    "service": "환풍기교체",
+    "slug": "송파구-거여동-환풍기교체",
+    "used": false
+  },
+  {
+    "id": "kw-053",
+    "location": "광진구 구의동",
+    "service": "변기교체",
+    "slug": "광진구-구의동-변기교체",
+    "used": false
+  },
+  {
+    "id": "kw-054",
+    "location": "광진구 구의동",
+    "service": "수전교체",
+    "slug": "광진구-구의동-수전교체",
+    "used": false
+  },
+  {
+    "id": "kw-055",
+    "location": "광진구 화양동",
+    "service": "환풍기교체",
+    "slug": "광진구-화양동-환풍기교체",
+    "used": false
+  },
+  {
+    "id": "kw-056",
+    "location": "강동구 천호동",
+    "service": "샤워기수전교체",
+    "slug": "강동구-천호동-샤워기수전교체",
+    "used": false
+  },
+  {
+    "id": "kw-057",
+    "location": "강동구 성내동",
+    "service": "샤워기수전교체",
+    "slug": "강동구-성내동-샤워기수전교체",
+    "used": false
+  },
+  {
+    "id": "kw-058",
+    "location": "강동구 길동",
+    "service": "샤워기수전교체",
+    "slug": "강동구-길동-샤워기수전교체",
+    "used": false
+  },
+  {
+    "id": "kw-059",
+    "location": "강동구 암사동",
+    "service": "샤워기수전교체",
+    "slug": "강동구-암사동-샤워기수전교체",
+    "used": false
+  },
+  {
+    "id": "kw-060",
+    "location": "강동구 명일동",
+    "service": "샤워기수전교체",
+    "slug": "강동구-명일동-샤워기수전교체",
+    "used": false
+  }
 ]
