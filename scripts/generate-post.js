@@ -1,76 +1,138 @@
-/**
- * generate-post.js
- * 매일 1개 키워드를 골라 posts/ 디렉터리에 HTML 페이지를 생성합니다.
- * 실행: node scripts/generate-post.js
- */
-
-const fs   = require('fs');
+#!/usr/bin/env node
+const fs = require('fs');
 const path = require('path');
 
-// ── 경로 설정 ──
-const ROOT          = path.join(__dirname, '..');
-const KEYWORDS_PATH = path.join(ROOT, 'data', 'keywords.json');
-const POSTS_PATH    = path.join(ROOT, 'data', 'posts.json');
-const TEMPLATE_PATH = path.join(ROOT, 'templates', 'post-template.html');
-const POSTS_DIR     = path.join(ROOT, 'posts');
+const BASE = path.join(__dirname, '..');
 
-// ── 유틸 ──
-function encodeKorean(str) {
-  return encodeURIComponent(str);
+const services = [{"name":"변기교체","icon":"🚽","photo":"photo-1584622650111-993a426fbf0a","bg":"#ddeaf7"},{"name":"세면대수전교체","icon":"🪣","photo":"photo-1507652313519-d4e9174996dd","bg":"#d5eddc"},{"name":"싱크대수전교체","icon":"🍳","photo":"photo-1556911220-bff31c812dba","bg":"#d5eddc"},{"name":"샤워기수전교체","icon":"🚿","photo":"photo-1552321554-5fefe8c9ef14","bg":"#d5eddc"},{"name":"환풍기교체","icon":"💨","photo":"photo-1558618666-fcd25c85cd64","bg":"#e8e0d5"},{"name":"전체인테리어","icon":"🏠","photo":"photo-1484101403633-562f891dc89a","bg":"#fef3e2"},{"name":"바닥보수","icon":"🪵","photo":"photo-1524758631624-e2822e304c36","bg":"#f5ede2"},{"name":"도배","icon":"🎨","photo":"photo-1513694203232-719a280e022f","bg":"#f5e2f0"},{"name":"타일시공","icon":"⬜","photo":"photo-1558618047-3c8fc7e6c5c6","bg":"#e2eaf5"},{"name":"누수수리","icon":"🔧","photo":"photo-1504328345606-18bbc8c9d7d1","bg":"#e2f0f5"}];
+
+function getImageUrl(serviceName) {
+  const svc = services.find(s => s.name === serviceName);
+  return svc ? `https://images.unsplash.com/${svc.photo}?w=800&q=75&auto=format&fit=crop` : '';
 }
 
-function today() {
-  return new Date().toISOString().split('T')[0];
+function getImageBg(serviceName) {
+  const svc = services.find(s => s.name === serviceName);
+  return svc ? svc.bg : '#ddeaf7';
 }
 
-// ── 메인 ──
-function main() {
-  // 1. 데이터 로드
-  const keywords = JSON.parse(fs.readFileSync(KEYWORDS_PATH, 'utf8'));
-  const posts    = JSON.parse(fs.readFileSync(POSTS_PATH,    'utf8'));
-  const template = fs.readFileSync(TEMPLATE_PATH, 'utf8');
-
-  // 2. 미사용 키워드 찾기
-  const unused = keywords.filter(k => !k.used);
-  if (!unused.length) {
-    console.log('✅ 모든 키워드를 소진했습니다. keywords.json에서 used를 false로 재설정하세요.');
-    process.exit(0);
-  }
-
-  const kw = unused[0];
-  const date = today();
-
-  // 3. HTML 생성 (템플릿 치환)
-  const html = template
-    .replace(/\{\{LOCATION\}\}/g,      kw.location)
-    .replace(/\{\{SERVICE\}\}/g,       kw.service)
-    .replace(/\{\{SLUG\}\}/g,          kw.slug)
-    .replace(/\{\{DATE\}\}/g,          date)
-    .replace(/\{\{LOCATION_ENC\}\}/g,  encodeKorean(kw.location))
-    .replace(/\{\{SERVICE_ENC\}\}/g,   encodeKorean(kw.service));
-
-  // 4. 파일 저장 (posts/{slug}/index.html)
-  const postDir = path.join(POSTS_DIR, kw.slug);
-  fs.mkdirSync(postDir, { recursive: true });
-  fs.writeFileSync(path.join(postDir, 'index.html'), html, 'utf8');
-  console.log(`✅ 생성: posts/${kw.slug}/index.html`);
-
-  // 5. keywords.json 업데이트
-  kw.used = true;
-  kw.usedDate = date;
-  fs.writeFileSync(KEYWORDS_PATH, JSON.stringify(keywords, null, 2), 'utf8');
-
-  // 6. posts.json 인덱스 업데이트
-  posts.unshift({
-    slug:     kw.slug,
-    title:    `${kw.location} ${kw.service} 출장 방문 안내`,
-    location: kw.location,
-    service:  kw.service,
-    date:     date,
-    url:      `/posts/${kw.slug}/`
-  });
-  fs.writeFileSync(POSTS_PATH, JSON.stringify(posts, null, 2), 'utf8');
-  console.log(`✅ posts.json 업데이트: ${posts.length}개 포스트`);
+function getIcon(serviceName) {
+  const svc = services.find(s => s.name === serviceName);
+  return svc ? svc.icon : '🔧';
 }
 
-main();
+// Load keywords
+const kwPath = path.join(BASE, 'data/keywords.json');
+let keywords = JSON.parse(fs.readFileSync(kwPath, 'utf8'));
+
+// Find unused keywords; if all used, reset all
+let unused = keywords.filter(k => !k.used);
+if (unused.length === 0) {
+  console.log('All keywords used — resetting pool');
+  keywords = keywords.map(k => ({ ...k, used: false, usedDate: undefined }));
+  unused = [...keywords];
+}
+
+// Pick random unused keyword
+const idx = Math.floor(Math.random() * unused.length);
+const kw = unused[idx];
+
+const today = new Date().toISOString().split('T')[0];
+const slug = kw.slug;
+const title = `${kw.location} ${kw.service} 전문 스마트디자인`;
+const imageUrl = getImageUrl(kw.service);
+const imageBg = getImageBg(kw.service);
+const icon = getIcon(kw.service);
+
+// Generate post HTML
+const postDir = path.join(BASE, 'posts', slug);
+fs.mkdirSync(postDir, { recursive: true });
+
+const html = `<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>${title} | 스마트디자인</title>
+<meta name="description" content="${kw.location} ${kw.service} 전문 스마트디자인. 당일출동·정찰제·무상A/S. 상담: 010-5064-2342"/>
+<link rel="canonical" href="https://1485testing.netlify.app/posts/${slug}/"/>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Article","headline":"${title}","datePublished":"${today}","author":{"@type":"Organization","name":"스마트디자인"}},
+{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"${kw.location} ${kw.service} 비용이 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"정찰제 운영. 방문 전 정확한 금액 안내. 추가 비용 없음. 010-5064-2342"}},{"@type":"Question","name":"당일 완료 가능한가요?","acceptedAnswer":{"@type":"Answer","text":"네. ${kw.location} 기사 상시 대기. 당일 완료 가능합니다."}}]}
+]}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--primary:#1a4f8a;--accent:#e8820c;--bg:#f5f6f8;--card:#fff;--text:#111827;--muted:#6b7280;--border:#e5e7eb;--r:10px}
+body{font-family:'Apple SD Gothic Neo','Malgun Gothic',sans-serif;background:var(--bg);color:var(--text);font-size:15px;line-height:1.65}
+a{color:inherit;text-decoration:none}
+header{background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 20px;height:56px;position:sticky;top:0;z-index:100}
+.logo{font-size:17px;font-weight:900}.header-cta{background:var(--accent);color:#fff;padding:7px 14px;border-radius:6px;font-weight:700;font-size:13px}
+.post-hero{position:relative;width:100%;aspect-ratio:16/9;background:${imageBg};overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:60px}
+.post-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.breadcrumb{font-size:12px;color:var(--muted);padding:12px 20px;background:var(--card);border-bottom:1px solid var(--border)}
+.breadcrumb a{color:var(--primary)}
+article{max-width:680px;margin:0 auto;padding:24px 20px 60px}
+.art-label{display:inline-flex;align-items:center;gap:6px;background:var(--primary);color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:4px;margin-bottom:12px}
+h1{font-size:22px;font-weight:900;line-height:1.35;margin-bottom:10px;word-break:keep-all}
+.art-meta{font-size:12px;color:var(--muted);margin-bottom:20px;display:flex;gap:12px}
+.art-body{font-size:14px;line-height:1.9;color:#374151}
+.art-body h2{font-size:17px;font-weight:800;margin:24px 0 10px;color:var(--text)}
+.art-body p{margin-bottom:14px}.art-body ul{padding-left:20px;margin-bottom:14px}.art-body li{margin-bottom:6px}
+.cta-box{background:linear-gradient(135deg,var(--primary),#0d3060);border-radius:var(--r);padding:24px 20px;text-align:center;color:#fff;margin:24px 0}
+.cta-box p{font-size:13px;opacity:.85;margin-bottom:14px;word-break:keep-all}
+.cta-box a{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;padding:13px 28px;border-radius:8px;font-size:18px;font-weight:900}
+.faq-item{border-bottom:1px solid var(--border)}.faq-item:first-of-type{border-top:1px solid var(--border)}
+.faq-q{padding:14px 0;font-size:14px;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq-arrow{width:22px;height:22px;min-width:22px;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--muted);transition:.2s}
+.faq-q.open .faq-arrow{background:var(--primary);border-color:var(--primary);color:#fff;transform:rotate(45deg)}
+.faq-a{display:none;padding:0 0 14px;font-size:13px;color:var(--muted);line-height:1.8;word-break:keep-all}
+.faq-a.open{display:block}
+footer{background:#1a1a1a;color:rgba(255,255,255,.5);padding:24px 20px;font-size:12px;text-align:center;line-height:2}
+footer strong{color:#fff;font-size:14px;display:block;margin-bottom:6px}
+</style>
+</head>
+<body>
+<header><a href="/" class="logo">스마트디자인</a><a href="tel:010-5064-2342" class="header-cta">📞 긴급상담</a></header>
+<div class="post-hero">${icon}<img src="${imageUrl}" alt="${title}" onerror="this.remove()"/></div>
+<div class="breadcrumb"><a href="/">홈</a> › ${kw.location} ${kw.service}</div>
+<article>
+  <div class="art-label">${kw.service}</div>
+  <h1>${title}</h1>
+  <div class="art-meta"><span>📍 ${kw.location}</span><span>📅 ${today}</span></div>
+  <div class="art-body">
+    <h2>${kw.location} ${kw.service} — 스마트디자인 출장 안내</h2>
+    <p>${kw.location} 지역에서 <strong>${kw.service}</strong> 서비스가 필요하신가요? 스마트디자인은 당일 출동·정찰제·무상 A/S를 제공합니다.</p>
+    <h2>왜 스마트디자인인가요?</h2>
+    <ul>
+      <li><strong>정찰제 운영</strong> — 방문 전 정확한 금액 안내, 추가 비용 없음</li>
+      <li><strong>당일 출동</strong> — 상시 대기, 빠른 출동</li>
+      <li><strong>전문가 직접 시공</strong> — 오랜 경력의 기사 직접 작업</li>
+      <li><strong>무상 A/S 보장</strong> — 시공 후 문제 발생 시 무상 처리</li>
+    </ul>
+    <div class="cta-box">
+      <p>지금 바로 전화하시면 ${kw.location} 담당 기사가 빠르게 안내드립니다.</p>
+      <a href="tel:010-5064-2342">📞 010-5064-2342</a>
+    </div>
+    <h2>자주 묻는 질문</h2>
+    <div class="faq-item"><div class="faq-q">${kw.location} ${kw.service} 비용이 얼마인가요?<span class="faq-arrow">＋</span></div><div class="faq-a">정찰제로 운영합니다. 방문 전 정확한 금액을 먼저 안내드리며 추가 비용은 없습니다.</div></div>
+    <div class="faq-item"><div class="faq-q">당일 완료 가능한가요?<span class="faq-arrow">＋</span></div><div class="faq-a">네. ${kw.location} 기사 상시 대기 중으로 대부분 당일 완료됩니다.</div></div>
+  </div>
+</article>
+<footer><strong>스마트디자인</strong>경기도 하남시 대청로 59번길 15 | 010-5064-2342<br>© 2026 스마트디자인.</footer>
+<script>document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{const o=q.classList.contains('open');document.querySelectorAll('.faq-q').forEach(x=>{x.classList.remove('open');x.nextElementSibling.classList.remove('open')});if(!o){q.classList.add('open');q.nextElementSibling.classList.add('open')}})});</script>
+</body></html>`;
+
+fs.writeFileSync(path.join(postDir, 'index.html'), html);
+
+// Update keywords.json
+keywords = keywords.map(k => k.slug === slug ? { ...k, used: true, usedDate: today } : k);
+fs.writeFileSync(kwPath, JSON.stringify(keywords, null, 2));
+
+// Prepend to posts.json
+const postsPath = path.join(BASE, 'data/posts.json');
+const allPosts = JSON.parse(fs.readFileSync(postsPath, 'utf8'));
+allPosts.unshift({ slug, title, location: kw.location, service: kw.service, date: today, image: imageUrl, imgBg: imageBg, icon, url: `/posts/${slug}/` });
+fs.writeFileSync(postsPath, JSON.stringify(allPosts, null, 2));
+
+console.log(`Generated: ${title} [${today}]`);
