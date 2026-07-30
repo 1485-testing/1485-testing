@@ -404,7 +404,8 @@
     "location": "송파구 거여동",
     "service": "변기교체",
     "slug": "송파구-거여동-변기교체",
-    "used": false
+    "used": true,
+    "usedDate": "2026-07-30"
   },
   {
     "id": "kw-052",
