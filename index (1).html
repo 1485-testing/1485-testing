@@ -1,39 +1,144 @@
-name: 매일 키워드 페이지 자동 생성
+/**
+ * 스마트디자인 — 시공 사례 관리 Netlify Function
+ * POST body: { password, action?, ...fields }
+ *   action: undefined → 추가, 'update' → 수정, 'delete' → 삭제
+ */
+const https = require('https');
 
-on:
-  # 매일 오전 9시 (KST = UTC+9, 즉 UTC 00:00)
-  schedule:
-    - cron: '0 0 * * *'
+const OWNER = process.env.GITHUB_OWNER;
+const REPO  = process.env.GITHUB_REPO;
+const TOKEN = process.env.GITHUB_TOKEN;
+const FILE  = 'data/cases.json';
 
-  # 수동 실행 버튼 (GitHub Actions 탭에서 "Run workflow" 클릭)
-  workflow_dispatch:
+/* ── GitHub API 헬퍼 ── */
+function ghRequest(method, path, body) {
+  return new Promise((resolve, reject) => {
+    const data = body ? JSON.stringify(body) : null;
+    const req = https.request({
+      hostname: 'api.github.com',
+      path: `/repos/${OWNER}/${REPO}/contents/${path}`,
+      method,
+      headers: {
+        'Authorization': `token ${TOKEN}`,
+        'User-Agent': 'smartdesign-netlify',
+        'Content-Type': 'application/json',
+        ...(data ? {'Content-Length': Buffer.byteLength(data)} : {})
+      }
+    }, (res) => {
+      let raw = '';
+      res.on('data', d => raw += d);
+      res.on('end', () => {
+        try { resolve({ status: res.statusCode, body: JSON.parse(raw) }); }
+        catch(e) { resolve({ status: res.statusCode, body: raw }); }
+      });
+    });
+    req.on('error', reject);
+    if (data) req.write(data);
+    req.end();
+  });
+}
 
-jobs:
-  generate:
-    runs-on: ubuntu-latest
+/* ── cases.json 읽기 ── */
+async function readCases() {
+  const res = await ghRequest('GET', FILE);
+  if (res.status === 404) return { cases: [], sha: null };
+  if (res.status !== 200) throw new Error(`GitHub read error: ${res.status}`);
+  const content = Buffer.from(res.body.content, 'base64').toString('utf8');
+  return { cases: JSON.parse(content), sha: res.body.sha };
+}
 
-    steps:
-      # 1. 레포 체크아웃
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+/* ── cases.json 저장 ── */
+async function writeCases(cases, sha, message) {
+  const content = Buffer.from(JSON.stringify(cases, null, 2)).toString('base64');
+  const body = { message, content, ...(sha ? { sha } : {}) };
+  const res = await ghRequest('PUT', FILE, body);
+  if (res.status !== 200 && res.status !== 201) {
+    throw new Error(`GitHub write error: ${res.status} — ${JSON.stringify(res.body)}`);
+  }
+  return res;
+}
 
-      # 2. Node.js 설치
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
+/* ── UUID 생성 ── */
+function uid() {
+  return Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+}
 
-      # 3. 포스트 생성 스크립트 실행
-      - name: Generate daily post
-        run: node scripts/generate-post.js
+/* ── 메인 핸들러 ── */
+exports.handler = async (event) => {
+  const headers = {
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Headers': 'Content-Type',
+    'Content-Type': 'application/json'
+  };
 
-      # 4. 변경사항 커밋 & 푸시
-      - name: Commit and push
-        run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
-          git diff --staged --quiet || git commit -m "auto: $(date '+%Y-%m-%d') 키워드 페이지 자동 생성"
-          git push
+  if (event.httpMethod === 'OPTIONS') {
+    return { statusCode: 200, headers, body: '' };
+  }
+  if (event.httpMethod !== 'POST') {
+    return { statusCode: 405, headers, body: JSON.stringify({ message: 'Method not allowed' }) };
+  }
+
+  let parsed;
+  try { parsed = JSON.parse(event.body); }
+  catch { return { statusCode: 400, headers, body: JSON.stringify({ message: '요청 형식 오류' }) }; }
+
+  const { password, action, id, title, location, service, date, description, image, tags } = parsed;
+
+  // 환경 변수 체크
+  if (!TOKEN || !OWNER || !REPO) {
+    return { statusCode: 500, headers, body: JSON.stringify({ message: 'Netlify 환경변수가 설정되지 않았습니다. (GITHUB_TOKEN, GITHUB_OWNER, GITHUB_REPO)' }) };
+  }
+
+  // 비밀번호 확인
+  if (!process.env.ADMIN_PASS) {
+    return { statusCode: 500, headers, body: JSON.stringify({ message: 'ADMIN_PASS 환경변수가 설정되지 않았습니다.' }) };
+  }
+  if (password !== process.env.ADMIN_PASS) {
+    return { statusCode: 401, headers, body: JSON.stringify({ message: '비밀번호가 올바르지 않습니다.' }) };
+  }
+
+  try {
+    const { cases, sha } = await readCases();
+
+    // ── 삭제 ──
+    if (action === 'delete') {
+      if (!id) return { statusCode: 400, headers, body: JSON.stringify({ message: 'id 필요' }) };
+      const updated = cases.filter(c => c.id !== id);
+      if (updated.length === cases.length) {
+        return { statusCode: 404, headers, body: JSON.stringify({ message: '해당 사례를 찾을 수 없습니다.' }) };
+      }
+      await writeCases(updated, sha, `삭제: ${id}`);
+      return { statusCode: 200, headers, body: JSON.stringify({ message: '삭제 완료' }) };
+    }
+
+    // ── 수정 ──
+    if (action === 'update') {
+      if (!id) return { statusCode: 400, headers, body: JSON.stringify({ message: 'id 필요' }) };
+      const idx = cases.findIndex(c => c.id === id);
+      if (idx === -1) {
+        return { statusCode: 404, headers, body: JSON.stringify({ message: '해당 사례를 찾을 수 없습니다.' }) };
+      }
+      cases[idx] = { ...cases[idx], title, location, service, date, description, image: image||'', tags: tags||[] };
+      await writeCases(cases, sha, `수정: ${title}`);
+      return { statusCode: 200, headers, body: JSON.stringify({ message: '수정 완료' }) };
+    }
+
+    // ── 추가 (기본) ──
+    if (!title || !location || !service || !date || !description) {
+      return { statusCode: 400, headers, body: JSON.stringify({ message: '필수 항목이 누락되었습니다.' }) };
+    }
+    const newCase = {
+      id: uid(),
+      title, location, service, date, description,
+      image: image || '',
+      tags: Array.isArray(tags) ? tags : (tags ? tags.split(',').map(t => t.trim()).filter(Boolean) : [])
+    };
+    cases.unshift(newCase);
+    await writeCases(cases, sha, `추가: ${title}`);
+    return { statusCode: 201, headers, body: JSON.stringify({ message: '추가 완료', id: newCase.id }) };
+
+  } catch (err) {
+    console.error('Function error:', err);
+    return { statusCode: 500, headers, body: JSON.stringify({ message: err.message || '서버 오류' }) };
+  }
+};
