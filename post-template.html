@@ -1,0 +1,165 @@
+#!/usr/bin/env node
+/**
+ * 스마트디자인 — 일일 SEO 포스트 자동 생성 스크립트
+ * GitHub Actions 매일 실행 (cron 0 0 * * *)
+ */
+const fs   = require('fs');
+const path = require('path');
+
+const ROOT = path.join(__dirname, '..');
+
+/* ── 서비스 설정 ── */
+const SERVICES = [
+  { name:'변기교체',      icon:'🚽', photo:'photo-1584622650111-993a426fbf0a', bg:'#ddeaf7' },
+  { name:'세면대수전교체', icon:'🪣', photo:'photo-1552321554-5fefe8c9ef14', bg:'#e0f2fe' },
+  { name:'싱크대수전교체', icon:'🍳', photo:'photo-1556909114-f6e7ad7d3136', bg:'#fef9c3' },
+  { name:'샤워기수전교체', icon:'🚿', photo:'photo-1620626011761-996317702782', bg:'#d1fae5' },
+  { name:'환풍기교체',    icon:'💨', photo:'photo-1585771724684-38269d6639fd', bg:'#ede9fe' },
+  { name:'전체인테리어',  icon:'🏠', photo:'photo-1484101403633-562f891dc89a', bg:'#fef3e2' },
+  { name:'바닥보수',     icon:'🪵', photo:'photo-1524758631624-e2822e304c36', bg:'#f5ede2' },
+  { name:'도배',        icon:'🖼️', photo:'photo-1562259949-e8e7689d7828', bg:'#fce7f3' },
+  { name:'타일시공',     icon:'🔲', photo:'photo-1558618666-fcd25c85cd64', bg:'#f0fdf4' },
+  { name:'누수수리',     icon:'💧', photo:'photo-1504328345606-18bbc8c9d7d1', bg:'#eff6ff' },
+];
+const SVC_MAP = Object.fromEntries(SERVICES.map(s => [s.name, s]));
+
+/* ── 키워드 풀 ── */
+const kwPath = path.join(ROOT, 'data', 'keywords.json');
+let keywords = JSON.parse(fs.readFileSync(kwPath, 'utf8'));
+let unused = keywords.filter(k => !k.used);
+if (unused.length === 0) {
+  keywords = keywords.map(k => ({ ...k, used: false, usedDate: undefined }));
+  unused = [...keywords];
+}
+const pick = unused[Math.floor(Math.random() * unused.length)];
+const today = new Date().toISOString().slice(0, 10);
+
+/* ── 선택한 키워드에 서비스 매핑 ── */
+const svc = SVC_MAP[pick.service] || SERVICES[0];
+const imageUrl = `https://images.unsplash.com/${svc.photo}?w=800&q=75&auto=format&fit=crop`;
+const slug = `${pick.location}-${pick.service}`.replace(/\s+/g, '-');
+const title = `${pick.location} ${pick.service} 당일출장 전문 | 스마트디자인`;
+const url = `/posts/${slug}/`;
+
+/* ── 포스트 HTML 생성 (layout.js 사용) ── */
+const html = `<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>${title}</title>
+  <meta name="description" content="${pick.location} ${pick.service} 전문업체 스마트디자인. 정찰제·당일출장·무상A/S. 0503-7150-5346"/>
+  <link rel="canonical" href="https://1485testing.netlify.app${url}"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"${title}","datePublished":"${today}","author":{"@type":"Organization","name":"스마트디자인"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"${pick.location} ${pick.service} 비용은?","acceptedAnswer":{"@type":"Answer","text":"방문 전 금액 안내드리는 정찰제 운영으로 추가 비용 없습니다. 전화 문의 주세요."}},{"@type":"Question","name":"당일 출장이 되나요?","acceptedAnswer":{"@type":"Answer","text":"${pick.location} 인근 상주 기사가 24시간 대기 중입니다."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://1485testing.netlify.app/"},{"@type":"ListItem","position":2,"name":"지역 시공 안내","item":"https://1485testing.netlify.app/posts/"},{"@type":"ListItem","position":3,"name":"${pick.location} ${pick.service}","item":"https://1485testing.netlify.app${url}"}]}</script>
+  <script src="/js/layout.js"></script>
+  <style>
+.post-hero{background:${svc.bg};padding:32px 20px 28px;text-align:center;position:relative;overflow:hidden}
+.post-hero-img{width:100%;max-height:220px;object-fit:cover;border-radius:12px;margin-bottom:18px;box-shadow:0 4px 16px rgba(0,0,0,.12)}
+.post-hero-badge{display:inline-flex;align-items:center;gap:6px;background:var(--p);color:#fff;font-size:12px;font-weight:700;padding:5px 14px;border-radius:20px;margin-bottom:14px}
+.post-title{font-size:22px;font-weight:900;color:var(--tx);line-height:1.35;letter-spacing:-.3px;margin-bottom:8px;word-break:keep-all}
+.post-meta-bar{display:flex;align-items:center;justify-content:center;gap:12px;font-size:12px;color:var(--mu)}
+.post-body{padding:24px 16px;max-width:680px;margin:0 auto}
+.post-body h2{font-size:17px;font-weight:900;color:var(--tx);margin:24px 0 10px;padding-left:10px;border-left:3px solid var(--p)}
+.post-body p{font-size:14px;color:var(--mu);line-height:1.9;margin-bottom:14px;word-break:keep-all}
+.post-body ul{margin:0 0 16px 18px;font-size:14px;color:var(--mu);line-height:2}
+.post-cta{background:var(--a);border-radius:12px;padding:24px 20px;text-align:center;margin:24px 0}
+.post-cta p{font-size:13px;color:rgba(255,255,255,.9);margin-bottom:14px;word-break:keep-all}
+.post-cta a{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--a);padding:12px 26px;border-radius:8px;font-size:18px;font-weight:900}
+.faq-list{display:grid;gap:8px;margin-top:8px}
+.faq-item{background:var(--card);border:1px solid var(--bd);border-radius:10px;overflow:hidden;box-shadow:var(--sh0)}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;cursor:pointer;font-size:13.5px;font-weight:700;color:var(--tx);gap:10px}
+.faq-ic{font-size:16px;color:var(--mu2);transition:.2s;flex-shrink:0}
+.faq-item.open .faq-ic{transform:rotate(45deg);color:var(--a)}
+.faq-a{display:none;padding:0 16px 14px;font-size:13px;color:var(--mu);line-height:1.85;border-top:1px solid var(--bd)}
+.faq-item.open .faq-a{display:block}
+  </style>
+</head>
+<body>
+<div id="sd-header"></div>
+
+<section class="post-hero">
+  <img src="${imageUrl}" alt="${pick.location} ${pick.service}" class="post-hero-img" loading="eager" onerror="this.style.display='none'">
+  <div class="post-hero-badge">${svc.icon} ${pick.service}</div>
+  <h1 class="post-title">${pick.location} ${pick.service}<br>당일출장 전문업체</h1>
+  <div class="post-meta-bar">
+    <span>📍 ${pick.location}</span>
+    <span>·</span>
+    <span>📅 ${today}</span>
+    <span>·</span>
+    <span>스마트디자인</span>
+  </div>
+</section>
+
+<div class="post-body">
+  <h2>📌 ${pick.location} ${pick.service} 안내</h2>
+  <p>${pick.location} 인근에서 ${pick.service} 전문 업체를 찾고 계신가요? 스마트디자인은 강동구·하남시 일대 출장 집수리 전문 업체로, 방문 전 정확한 금액을 안내드리는 정찰제 운영으로 추가 비용 걱정 없이 이용하실 수 있습니다.</p>
+
+  <h2>✅ 스마트디자인 서비스 특징</h2>
+  <ul>
+    <li>정찰제 운영 — 방문 전 금액 확정, 추가 비용 없음</li>
+    <li>당일 출장 — ${pick.location} 인근 상주 기사 24시간 대기</li>
+    <li>전문가 직접 시공 — 경력 기사가 직접 방문</li>
+    <li>무상 A/S — 시공 후 하자 발생 시 무상 처리</li>
+    <li>못 설치하면 비용 0원 보장</li>
+  </ul>
+
+  <div class="post-cta">
+    <p>${pick.location} ${pick.service} 문의 · 24시간 상담 가능</p>
+    <a href="tel:0503-7150-5346">📞 0503-7150-5346</a>
+  </div>
+
+  <h2>❓ 자주 묻는 질문</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-q"><span>${pick.location} ${pick.service} 비용은 얼마인가요?</span><span class="faq-ic">+</span></div>
+      <div class="faq-a">방문 전 정확한 금액을 안내드리는 정찰제 운영으로 추가 비용이 없습니다. 정확한 견적은 전화 문의 시 안내해 드립니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><span>당일 출장이 가능한가요?</span><span class="faq-ic">+</span></div>
+      <div class="faq-a">${pick.location} 인근 상주 기사가 24시간 대기 중이므로 연락 후 빠른 시간 내 방문 가능합니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><span>A/S 보장이 되나요?</span><span class="faq-ic">+</span></div>
+      <div class="faq-a">시공 후 발생하는 하자는 무상으로 처리해 드립니다. 안심하고 이용하세요.</div>
+    </div>
+  </div>
+</div>
+
+<div id="sd-footer"></div>
+<script>
+SD.init('', true);
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    var item=this.closest('.faq-item');
+    var wasOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open')});
+    if(!wasOpen) item.classList.add('open');
+  });
+});
+</script>
+</body>
+</html>`;
+
+/* ── 파일 저장 ── */
+const postDir = path.join(ROOT, 'posts', slug);
+fs.mkdirSync(postDir, { recursive: true });
+fs.writeFileSync(path.join(postDir, 'index.html'), html, 'utf8');
+
+/* ── posts.json 업데이트 ── */
+const postsPath = path.join(ROOT, 'data', 'posts.json');
+const posts = JSON.parse(fs.readFileSync(postsPath, 'utf8'));
+posts.unshift({
+  slug, title: `${pick.location} ${pick.service} 당일출장 전문`,
+  location: pick.location, service: pick.service,
+  date: today, image: imageUrl, imgBg: svc.bg, icon: svc.icon, url
+});
+fs.writeFileSync(postsPath, JSON.stringify(posts, null, 2), 'utf8');
+
+/* ── keywords.json 업데이트 ── */
+const idx = keywords.findIndex(k => k.location === pick.location && k.service === pick.service);
+if (idx !== -1) { keywords[idx].used = true; keywords[idx].usedDate = today; }
+fs.writeFileSync(kwPath, JSON.stringify(keywords, null, 2), 'utf8');
+
+console.log(`✅ 생성 완료: ${pick.location} ${pick.service} (${today})`);
