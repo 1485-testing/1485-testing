@@ -1475,7 +1475,8 @@
     "location": "광진구 자양동",
     "service": "바닥보수",
     "slug": "광진구-자양동-바닥보수",
-    "used": false
+    "used": true,
+    "usedDate": "2026-07-31"
   },
   {
     "id": "kw-198",
