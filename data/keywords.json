@@ -134,7 +134,8 @@
     "location": "강동구 성내동",
     "service": "도배",
     "slug": "강동구-성내동-도배",
-    "used": false
+    "used": true,
+    "usedDate": "2026-08-01"
   },
   {
     "id": "kw-019",
