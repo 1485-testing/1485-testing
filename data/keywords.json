@@ -1359,7 +1359,8 @@
     "location": "광진구 화양동",
     "service": "변기교체",
     "slug": "광진구-화양동-변기교체",
-    "used": false
+    "used": true,
+    "usedDate": "2026-08-02"
   },
   {
     "id": "kw-182",
