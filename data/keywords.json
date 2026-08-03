@@ -770,7 +770,8 @@
     "location": "하남시 미사동",
     "service": "세면대수전교체",
     "slug": "하남시-미사동-세면대수전교체",
-    "used": false
+    "used": true,
+    "usedDate": "2026-08-03"
   },
   {
     "id": "kw-103",
