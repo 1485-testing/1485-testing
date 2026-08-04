@@ -1005,7 +1005,8 @@
     "location": "하남시 학암동",
     "service": "싱크대수전교체",
     "slug": "하남시-학암동-싱크대수전교체",
-    "used": false
+    "used": true,
+    "usedDate": "2026-08-04"
   },
   {
     "id": "kw-134",
