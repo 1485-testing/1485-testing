@@ -1383,7 +1383,8 @@
     "location": "광진구 화양동",
     "service": "샤워기수전교체",
     "slug": "광진구-화양동-샤워기수전교체",
-    "used": false
+    "used": true,
+    "usedDate": "2026-08-05"
   },
   {
     "id": "kw-185",
