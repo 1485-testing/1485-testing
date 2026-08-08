@@ -309,7 +309,8 @@
     "location": "강동구 명일동",
     "service": "변기교체",
     "slug": "강동구-명일동-변기교체",
-    "used": false
+    "used": true,
+    "usedDate": "2026-08-08"
   },
   {
     "id": "kw-042",
