@@ -1319,7 +1319,8 @@
     "location": "광진구 구의동",
     "service": "환풍기교체",
     "slug": "광진구-구의동-환풍기교체",
-    "used": false
+    "used": true,
+    "usedDate": "2026-08-09"
   },
   {
     "id": "kw-176",
