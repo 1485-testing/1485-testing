@@ -1327,7 +1327,8 @@
     "location": "광진구 구의동",
     "service": "전체인테리어",
     "slug": "광진구-구의동-전체인테리어",
-    "used": false
+    "used": true,
+    "usedDate": "2026-08-10"
   },
   {
     "id": "kw-177",
