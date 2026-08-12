@@ -1360,7 +1360,8 @@
     "location": "광진구 구의동",
     "service": "누수수리",
     "slug": "광진구-구의동-누수수리",
-    "used": false
+    "used": true,
+    "usedDate": "2026-08-12"
   },
   {
     "id": "kw-181",
