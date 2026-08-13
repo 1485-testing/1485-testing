@@ -1038,7 +1038,8 @@
     "location": "하남시 학암동",
     "service": "바닥보수",
     "slug": "하남시-학암동-바닥보수",
-    "used": false
+    "used": true,
+    "usedDate": "2026-08-13"
   },
   {
     "id": "kw-138",
