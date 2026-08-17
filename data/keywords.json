@@ -1183,7 +1183,8 @@
     "location": "송파구 거여동",
     "service": "전체인테리어",
     "slug": "송파구-거여동-전체인테리어",
-    "used": false
+    "used": true,
+    "usedDate": "2026-08-17"
   },
   {
     "id": "kw-157",
