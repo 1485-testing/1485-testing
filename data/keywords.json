@@ -1456,7 +1456,8 @@
     "location": "광진구 자양동",
     "service": "세면대수전교체",
     "slug": "광진구-자양동-세면대수전교체",
-    "used": false
+    "used": true,
+    "usedDate": "2026-08-18"
   },
   {
     "id": "kw-193",
