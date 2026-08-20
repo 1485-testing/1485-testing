@@ -1502,7 +1502,8 @@
     "location": "광진구 자양동",
     "service": "도배",
     "slug": "광진구-자양동-도배",
-    "used": false
+    "used": true,
+    "usedDate": "2026-08-20"
   },
   {
     "id": "kw-199",
