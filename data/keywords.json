@@ -1078,7 +1078,8 @@
     "location": "송파구 방이동",
     "service": "세면대수전교체",
     "slug": "송파구-방이동-세면대수전교체",
-    "used": false
+    "used": true,
+    "usedDate": "2026-08-21"
   },
   {
     "id": "kw-143",
