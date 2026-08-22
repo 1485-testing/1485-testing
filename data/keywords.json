@@ -1519,6 +1519,7 @@
     "location": "광진구 자양동",
     "service": "누수수리",
     "slug": "광진구-자양동-누수수리",
-    "used": false
+    "used": true,
+    "usedDate": "2026-08-22"
   }
 ]
