@@ -933,7 +933,8 @@
     "location": "하남시 덕풍동",
     "service": "싱크대수전교체",
     "slug": "하남시-덕풍동-싱크대수전교체",
-    "used": false
+    "used": true,
+    "usedDate": "2026-08-23"
   },
   {
     "id": "kw-124",
