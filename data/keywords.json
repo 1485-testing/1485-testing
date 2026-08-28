@@ -447,7 +447,8 @@
     "location": "강동구 고덕동",
     "service": "타일시공",
     "slug": "강동구-고덕동-타일시공",
-    "used": false
+    "used": true,
+    "usedDate": "2026-08-28"
   },
   {
     "id": "kw-060",
