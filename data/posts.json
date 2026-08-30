@@ -1,5 +1,16 @@
 [
   {
+    "slug": "송파구-오금동-도배",
+    "title": "송파구 오금동 도배 전문 스마트디자인",
+    "location": "송파구 오금동",
+    "service": "도배",
+    "date": "2026-08-30",
+    "image": "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800&q=75&auto=format&fit=crop",
+    "imgBg": "#f5e2f0",
+    "icon": "🎨",
+    "url": "/posts/송파구-오금동-도배/"
+  },
+  {
     "slug": "송파구-방이동-변기교체",
     "title": "송파구 방이동 변기교체 전문 스마트디자인",
     "location": "송파구 방이동",

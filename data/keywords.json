@@ -1280,7 +1280,8 @@
     "location": "송파구 오금동",
     "service": "도배",
     "slug": "송파구-오금동-도배",
-    "used": false
+    "used": true,
+    "usedDate": "2026-08-30"
   },
   {
     "id": "kw-169",
