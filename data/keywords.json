@@ -1060,7 +1060,8 @@
     "location": "하남시 학암동",
     "service": "타일시공",
     "slug": "하남시-학암동-타일시공",
-    "used": false
+    "used": true,
+    "usedDate": "2026-08-31"
   },
   {
     "id": "kw-140",
