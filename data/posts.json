@@ -1,5 +1,16 @@
 [
   {
+    "slug": "송파구-오금동-전체인테리어",
+    "title": "송파구 오금동 전체인테리어 전문 스마트디자인",
+    "location": "송파구 오금동",
+    "service": "전체인테리어",
+    "date": "2026-09-01",
+    "image": "https://images.unsplash.com/photo-1484101403633-562f891dc89a?w=800&q=75&auto=format&fit=crop",
+    "imgBg": "#fef3e2",
+    "icon": "🏠",
+    "url": "/posts/송파구-오금동-전체인테리어/"
+  },
+  {
     "slug": "하남시-학암동-타일시공",
     "title": "하남시 학암동 타일시공 전문 스마트디자인",
     "location": "하남시 학암동",
