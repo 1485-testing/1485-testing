@@ -637,7 +637,8 @@
     "location": "강동구 둔촌동",
     "service": "샤워기수전교체",
     "slug": "강동구-둔촌동-샤워기수전교체",
-    "used": false
+    "used": true,
+    "usedDate": "2026-09-02"
   },
   {
     "id": "kw-085",
