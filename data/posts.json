@@ -1,5 +1,16 @@
 [
   {
+    "slug": "송파구-오금동-누수수리",
+    "title": "송파구 오금동 누수수리 전문 스마트디자인",
+    "location": "송파구 오금동",
+    "service": "누수수리",
+    "date": "2026-09-04",
+    "image": "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=75&auto=format&fit=crop",
+    "imgBg": "#e2f0f5",
+    "icon": "🔧",
+    "url": "/posts/송파구-오금동-누수수리/"
+  },
+  {
     "slug": "하남시-미사동-도배",
     "title": "하남시 미사동 도배 전문 스마트디자인",
     "location": "하남시 미사동",

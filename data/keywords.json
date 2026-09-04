@@ -1300,7 +1300,8 @@
     "location": "송파구 오금동",
     "service": "누수수리",
     "slug": "송파구-오금동-누수수리",
-    "used": false
+    "used": true,
+    "usedDate": "2026-09-04"
   },
   {
     "id": "kw-171",
