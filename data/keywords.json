@@ -533,7 +533,8 @@
     "location": "강동구 상일동",
     "service": "누수수리",
     "slug": "강동구-상일동-누수수리",
-    "used": false
+    "used": true,
+    "usedDate": "2026-09-08"
   },
   {
     "id": "kw-071",
