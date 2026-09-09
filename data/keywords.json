@@ -1135,7 +1135,8 @@
     "location": "송파구 방이동",
     "service": "도배",
     "slug": "송파구-방이동-도배",
-    "used": false
+    "used": true,
+    "usedDate": "2026-09-09"
   },
   {
     "id": "kw-149",
