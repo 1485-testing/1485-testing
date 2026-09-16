@@ -876,7 +876,8 @@
     "location": "하남시 신장동",
     "service": "샤워기수전교체",
     "slug": "하남시-신장동-샤워기수전교체",
-    "used": false
+    "used": true,
+    "usedDate": "2026-09-16"
   },
   {
     "id": "kw-115",
