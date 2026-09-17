@@ -599,7 +599,8 @@
     "location": "강동구 강일동",
     "service": "도배",
     "slug": "강동구-강일동-도배",
-    "used": false
+    "used": true,
+    "usedDate": "2026-09-17"
   },
   {
     "id": "kw-079",
