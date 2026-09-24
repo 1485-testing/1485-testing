@@ -197,7 +197,8 @@
     "location": "강동구 길동",
     "service": "전체인테리어",
     "slug": "강동구-길동-전체인테리어",
-    "used": false
+    "used": true,
+    "usedDate": "2026-09-24"
   },
   {
     "id": "kw-027",
