@@ -1196,7 +1196,8 @@
     "location": "송파구 거여동",
     "service": "샤워기수전교체",
     "slug": "송파구-거여동-샤워기수전교체",
-    "used": false
+    "used": true,
+    "usedDate": "2026-09-26"
   },
   {
     "id": "kw-155",
