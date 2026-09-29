@@ -745,7 +745,8 @@
     "location": "강동구 풍납동",
     "service": "전체인테리어",
     "slug": "강동구-풍납동-전체인테리어",
-    "used": false
+    "used": true,
+    "usedDate": "2026-09-29"
   },
   {
     "id": "kw-097",
