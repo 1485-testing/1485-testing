@@ -184,7 +184,8 @@
     "location": "강동구 길동",
     "service": "샤워기수전교체",
     "slug": "강동구-길동-샤워기수전교체",
-    "used": false
+    "used": true,
+    "usedDate": "2026-10-06"
   },
   {
     "id": "kw-025",
