@@ -365,7 +365,8 @@
     "location": "강동구 명일동",
     "service": "바닥보수",
     "slug": "강동구-명일동-바닥보수",
-    "used": false
+    "used": true,
+    "usedDate": "2026-10-12"
   },
   {
     "id": "kw-048",
