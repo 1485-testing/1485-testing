@@ -870,7 +870,8 @@
     "location": "하남시 신장동",
     "service": "변기교체",
     "slug": "하남시-신장동-변기교체",
-    "used": false
+    "used": true,
+    "usedDate": "2026-10-13"
   },
   {
     "id": "kw-112",
