@@ -554,7 +554,8 @@
     "location": "강동구 강일동",
     "service": "변기교체",
     "slug": "강동구-강일동-변기교체",
-    "used": false
+    "used": true,
+    "usedDate": "2026-10-14"
   },
   {
     "id": "kw-072",
