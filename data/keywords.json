@@ -1156,7 +1156,8 @@
     "location": "송파구 방이동",
     "service": "바닥보수",
     "slug": "송파구-방이동-바닥보수",
-    "used": false
+    "used": true,
+    "usedDate": "2026-10-18"
   },
   {
     "id": "kw-148",
