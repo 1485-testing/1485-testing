@@ -114,7 +114,8 @@
     "location": "강동구 성내동",
     "service": "환풍기교체",
     "slug": "강동구-성내동-환풍기교체",
-    "used": false
+    "used": true,
+    "usedDate": "2026-10-20"
   },
   {
     "id": "kw-016",
