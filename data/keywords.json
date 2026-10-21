@@ -1292,7 +1292,8 @@
     "location": "송파구 오금동",
     "service": "샤워기수전교체",
     "slug": "송파구-오금동-샤워기수전교체",
-    "used": false
+    "used": true,
+    "usedDate": "2026-10-21"
   },
   {
     "id": "kw-165",
