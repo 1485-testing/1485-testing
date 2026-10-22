@@ -1031,7 +1031,8 @@
     "location": "하남시 학암동",
     "service": "변기교체",
     "slug": "하남시-학암동-변기교체",
-    "used": false
+    "used": true,
+    "usedDate": "2026-10-22"
   },
   {
     "id": "kw-132",
