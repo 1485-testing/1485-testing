@@ -422,7 +422,8 @@
     "location": "강동구 고덕동",
     "service": "샤워기수전교체",
     "slug": "강동구-고덕동-샤워기수전교체",
-    "used": false
+    "used": true,
+    "usedDate": "2026-10-24"
   },
   {
     "id": "kw-055",
