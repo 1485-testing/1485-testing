@@ -91,7 +91,8 @@
     "location": "강동구 성내동",
     "service": "세면대수전교체",
     "slug": "강동구-성내동-세면대수전교체",
-    "used": false
+    "used": true,
+    "usedDate": "2026-10-27"
   },
   {
     "id": "kw-013",
