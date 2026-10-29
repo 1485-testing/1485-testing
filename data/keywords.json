@@ -1156,7 +1156,8 @@
     "location": "송파구 방이동",
     "service": "전체인테리어",
     "slug": "송파구-방이동-전체인테리어",
-    "used": false
+    "used": true,
+    "usedDate": "2026-10-29"
   },
   {
     "id": "kw-147",
