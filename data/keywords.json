@@ -480,7 +480,8 @@
     "location": "강동구 상일동",
     "service": "변기교체",
     "slug": "강동구-상일동-변기교체",
-    "used": false
+    "used": true,
+    "usedDate": "2026-10-30"
   },
   {
     "id": "kw-062",
