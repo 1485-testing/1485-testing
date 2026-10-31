@@ -950,7 +950,8 @@
     "location": "하남시 신장동",
     "service": "누수수리",
     "slug": "하남시-신장동-누수수리",
-    "used": false
+    "used": true,
+    "usedDate": "2026-10-31"
   },
   {
     "id": "kw-121",
