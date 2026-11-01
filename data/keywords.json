@@ -163,7 +163,8 @@
     "location": "강동구 길동",
     "service": "변기교체",
     "slug": "강동구-길동-변기교체",
-    "used": false
+    "used": true,
+    "usedDate": "2026-11-01"
   },
   {
     "id": "kw-022",
