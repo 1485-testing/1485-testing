@@ -1495,7 +1495,8 @@
     "location": "광진구 화양동",
     "service": "도배",
     "slug": "광진구-화양동-도배",
-    "used": false
+    "used": true,
+    "usedDate": "2026-11-03"
   },
   {
     "id": "kw-189",
