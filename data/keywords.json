@@ -290,7 +290,8 @@
     "location": "강동구 암사동",
     "service": "바닥보수",
     "slug": "강동구-암사동-바닥보수",
-    "used": false
+    "used": true,
+    "usedDate": "2026-11-04"
   },
   {
     "id": "kw-038",
