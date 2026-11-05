@@ -20,7 +20,8 @@
     "location": "강동구 천호동",
     "service": "싱크대수전교체",
     "slug": "강동구-천호동-싱크대수전교체",
-    "used": false
+    "used": true,
+    "usedDate": "2026-11-05"
   },
   {
     "id": "kw-004",
