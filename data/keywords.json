@@ -4,376 +4,329 @@
     "location": "강동구 천호동",
     "service": "변기교체",
     "slug": "강동구-천호동-변기교체",
-    "used": true,
-    "usedDate": "2026-04-22"
+    "used": false
   },
   {
     "id": "kw-002",
     "location": "강동구 천호동",
     "service": "세면대수전교체",
     "slug": "강동구-천호동-세면대수전교체",
-    "used": true,
-    "usedDate": "2026-04-23"
+    "used": false
   },
   {
     "id": "kw-003",
     "location": "강동구 천호동",
     "service": "싱크대수전교체",
     "slug": "강동구-천호동-싱크대수전교체",
-    "used": true,
-    "usedDate": "2026-11-05"
+    "used": false
   },
   {
     "id": "kw-004",
     "location": "강동구 천호동",
     "service": "샤워기수전교체",
     "slug": "강동구-천호동-샤워기수전교체",
-    "used": true,
-    "usedDate": "2026-04-24"
+    "used": false
   },
   {
     "id": "kw-005",
     "location": "강동구 천호동",
     "service": "환풍기교체",
     "slug": "강동구-천호동-환풍기교체",
-    "used": true,
-    "usedDate": "2026-09-27"
+    "used": false
   },
   {
     "id": "kw-006",
     "location": "강동구 천호동",
     "service": "전체인테리어",
     "slug": "강동구-천호동-전체인테리어",
-    "used": true,
-    "usedDate": "2026-04-25"
+    "used": false
   },
   {
     "id": "kw-007",
     "location": "강동구 천호동",
     "service": "바닥보수",
     "slug": "강동구-천호동-바닥보수",
-    "used": true,
-    "usedDate": "2026-04-26"
+    "used": false
   },
   {
     "id": "kw-008",
     "location": "강동구 천호동",
     "service": "도배",
     "slug": "강동구-천호동-도배",
-    "used": true,
-    "usedDate": "2026-09-20"
+    "used": false
   },
   {
     "id": "kw-009",
     "location": "강동구 천호동",
     "service": "타일시공",
     "slug": "강동구-천호동-타일시공",
-    "used": true,
-    "usedDate": "2026-04-27"
+    "used": false
   },
   {
     "id": "kw-010",
     "location": "강동구 천호동",
     "service": "누수수리",
     "slug": "강동구-천호동-누수수리",
-    "used": true,
-    "usedDate": "2026-04-28"
+    "used": false
   },
   {
     "id": "kw-011",
     "location": "강동구 성내동",
     "service": "변기교체",
     "slug": "강동구-성내동-변기교체",
-    "used": true,
-    "usedDate": "2026-09-19"
+    "used": false
   },
   {
     "id": "kw-012",
     "location": "강동구 성내동",
     "service": "세면대수전교체",
     "slug": "강동구-성내동-세면대수전교체",
-    "used": true,
-    "usedDate": "2026-10-27"
+    "used": false
   },
   {
     "id": "kw-013",
     "location": "강동구 성내동",
     "service": "싱크대수전교체",
     "slug": "강동구-성내동-싱크대수전교체",
-    "used": true,
-    "usedDate": "2026-04-29"
+    "used": false
   },
   {
     "id": "kw-014",
     "location": "강동구 성내동",
     "service": "샤워기수전교체",
     "slug": "강동구-성내동-샤워기수전교체",
-    "used": true,
-    "usedDate": "2026-04-30"
+    "used": false
   },
   {
     "id": "kw-015",
     "location": "강동구 성내동",
     "service": "환풍기교체",
     "slug": "강동구-성내동-환풍기교체",
-    "used": true,
-    "usedDate": "2026-10-20"
+    "used": false
   },
   {
     "id": "kw-016",
     "location": "강동구 성내동",
     "service": "전체인테리어",
     "slug": "강동구-성내동-전체인테리어",
-    "used": true,
-    "usedDate": "2026-05-01"
+    "used": false
   },
   {
     "id": "kw-017",
     "location": "강동구 성내동",
     "service": "바닥보수",
     "slug": "강동구-성내동-바닥보수",
-    "used": true,
-    "usedDate": "2026-05-02"
+    "used": false
   },
   {
     "id": "kw-018",
     "location": "강동구 성내동",
     "service": "도배",
     "slug": "강동구-성내동-도배",
-    "used": true,
-    "usedDate": "2026-08-01"
+    "used": false
   },
   {
     "id": "kw-019",
     "location": "강동구 성내동",
     "service": "타일시공",
     "slug": "강동구-성내동-타일시공",
-    "used": true,
-    "usedDate": "2026-05-03"
+    "used": false
   },
   {
     "id": "kw-020",
     "location": "강동구 성내동",
     "service": "누수수리",
     "slug": "강동구-성내동-누수수리",
-    "used": true,
-    "usedDate": "2026-05-04"
+    "used": false
   },
   {
     "id": "kw-021",
     "location": "강동구 길동",
     "service": "변기교체",
     "slug": "강동구-길동-변기교체",
-    "used": true,
-    "usedDate": "2026-11-01"
+    "used": false
   },
   {
     "id": "kw-022",
     "location": "강동구 길동",
     "service": "세면대수전교체",
     "slug": "강동구-길동-세면대수전교체",
-    "used": true,
-    "usedDate": "2026-05-05"
+    "used": false
   },
   {
     "id": "kw-023",
     "location": "강동구 길동",
     "service": "싱크대수전교체",
     "slug": "강동구-길동-싱크대수전교체",
-    "used": true,
-    "usedDate": "2026-09-13"
+    "used": false
   },
   {
     "id": "kw-024",
     "location": "강동구 길동",
     "service": "샤워기수전교체",
     "slug": "강동구-길동-샤워기수전교체",
-    "used": true,
-    "usedDate": "2026-10-06"
+    "used": false
   },
   {
     "id": "kw-025",
     "location": "강동구 길동",
     "service": "환풍기교체",
     "slug": "강동구-길동-환풍기교체",
-    "used": true,
-    "usedDate": "2026-11-08"
+    "used": false
   },
   {
     "id": "kw-026",
     "location": "강동구 길동",
     "service": "전체인테리어",
     "slug": "강동구-길동-전체인테리어",
-    "used": true,
-    "usedDate": "2026-09-24"
+    "used": false
   },
   {
     "id": "kw-027",
     "location": "강동구 길동",
     "service": "바닥보수",
     "slug": "강동구-길동-바닥보수",
-    "used": true,
-    "usedDate": "2026-05-06"
+    "used": false
   },
   {
     "id": "kw-028",
     "location": "강동구 길동",
     "service": "도배",
     "slug": "강동구-길동-도배",
-    "used": true,
-    "usedDate": "2026-05-07"
+    "used": false
   },
   {
     "id": "kw-029",
     "location": "강동구 길동",
     "service": "타일시공",
     "slug": "강동구-길동-타일시공",
-    "used": true,
-    "usedDate": "2026-05-08"
+    "used": false
   },
   {
     "id": "kw-030",
     "location": "강동구 길동",
     "service": "누수수리",
     "slug": "강동구-길동-누수수리",
-    "used": true,
-    "usedDate": "2026-05-09"
+    "used": false
   },
   {
     "id": "kw-031",
     "location": "강동구 암사동",
     "service": "변기교체",
     "slug": "강동구-암사동-변기교체",
-    "used": true,
-    "usedDate": "2026-08-06"
+    "used": false
   },
   {
     "id": "kw-032",
     "location": "강동구 암사동",
     "service": "세면대수전교체",
     "slug": "강동구-암사동-세면대수전교체",
-    "used": true,
-    "usedDate": "2026-05-10"
+    "used": false
   },
   {
     "id": "kw-033",
     "location": "강동구 암사동",
     "service": "싱크대수전교체",
     "slug": "강동구-암사동-싱크대수전교체",
-    "used": true,
-    "usedDate": "2026-05-11"
+    "used": false
   },
   {
     "id": "kw-034",
     "location": "강동구 암사동",
     "service": "샤워기수전교체",
     "slug": "강동구-암사동-샤워기수전교체",
-    "used": true,
-    "usedDate": "2026-05-12"
+    "used": false
   },
   {
     "id": "kw-035",
     "location": "강동구 암사동",
     "service": "환풍기교체",
     "slug": "강동구-암사동-환풍기교체",
-    "used": true,
-    "usedDate": "2026-05-13"
+    "used": false
   },
   {
     "id": "kw-036",
     "location": "강동구 암사동",
     "service": "전체인테리어",
     "slug": "강동구-암사동-전체인테리어",
-    "used": true,
-    "usedDate": "2026-10-11"
+    "used": false
   },
   {
     "id": "kw-037",
     "location": "강동구 암사동",
     "service": "바닥보수",
     "slug": "강동구-암사동-바닥보수",
-    "used": true,
-    "usedDate": "2026-11-04"
+    "used": false
   },
   {
     "id": "kw-038",
     "location": "강동구 암사동",
     "service": "도배",
     "slug": "강동구-암사동-도배",
-    "used": true,
-    "usedDate": "2026-09-07"
+    "used": false
   },
   {
     "id": "kw-039",
     "location": "강동구 암사동",
     "service": "타일시공",
     "slug": "강동구-암사동-타일시공",
-    "used": true,
-    "usedDate": "2026-05-14"
+    "used": false
   },
   {
     "id": "kw-040",
     "location": "강동구 암사동",
     "service": "누수수리",
     "slug": "강동구-암사동-누수수리",
-    "used": true,
-    "usedDate": "2026-09-11"
+    "used": false
   },
   {
     "id": "kw-041",
     "location": "강동구 명일동",
     "service": "변기교체",
     "slug": "강동구-명일동-변기교체",
-    "used": true,
-    "usedDate": "2026-08-08"
+    "used": false
   },
   {
     "id": "kw-042",
     "location": "강동구 명일동",
     "service": "세면대수전교체",
     "slug": "강동구-명일동-세면대수전교체",
-    "used": true,
-    "usedDate": "2026-09-10"
+    "used": false
   },
   {
     "id": "kw-043",
     "location": "강동구 명일동",
     "service": "싱크대수전교체",
     "slug": "강동구-명일동-싱크대수전교체",
-    "used": true,
-    "usedDate": "2026-10-28"
+    "used": false
   },
   {
     "id": "kw-044",
     "location": "강동구 명일동",
     "service": "샤워기수전교체",
     "slug": "강동구-명일동-샤워기수전교체",
-    "used": true,
-    "usedDate": "2026-05-15"
+    "used": false
   },
   {
     "id": "kw-045",
     "location": "강동구 명일동",
     "service": "환풍기교체",
     "slug": "강동구-명일동-환풍기교체",
-    "used": true,
-    "usedDate": "2026-05-16"
+    "used": false
   },
   {
     "id": "kw-046",
     "location": "강동구 명일동",
     "service": "전체인테리어",
     "slug": "강동구-명일동-전체인테리어",
-    "used": true,
-    "usedDate": "2026-05-17"
+    "used": false
   },
   {
     "id": "kw-047",
     "location": "강동구 명일동",
     "service": "바닥보수",
     "slug": "강동구-명일동-바닥보수",
-    "used": true,
-    "usedDate": "2026-10-12"
+    "used": false
   },
   {
     "id": "kw-048",
@@ -381,1222 +334,1070 @@
     "service": "도배",
     "slug": "강동구-명일동-도배",
     "used": true,
-    "usedDate": "2026-09-12"
+    "usedDate": "2026-11-09"
   },
   {
     "id": "kw-049",
     "location": "강동구 명일동",
     "service": "타일시공",
     "slug": "강동구-명일동-타일시공",
-    "used": true,
-    "usedDate": "2026-05-18"
+    "used": false
   },
   {
     "id": "kw-050",
     "location": "강동구 명일동",
     "service": "누수수리",
     "slug": "강동구-명일동-누수수리",
-    "used": true,
-    "usedDate": "2026-08-25"
+    "used": false
   },
   {
     "id": "kw-051",
     "location": "강동구 고덕동",
     "service": "변기교체",
     "slug": "강동구-고덕동-변기교체",
-    "used": true,
-    "usedDate": "2026-05-19"
+    "used": false
   },
   {
     "id": "kw-052",
     "location": "강동구 고덕동",
     "service": "세면대수전교체",
     "slug": "강동구-고덕동-세면대수전교체",
-    "used": true,
-    "usedDate": "2026-05-20"
+    "used": false
   },
   {
     "id": "kw-053",
     "location": "강동구 고덕동",
     "service": "싱크대수전교체",
     "slug": "강동구-고덕동-싱크대수전교체",
-    "used": true,
-    "usedDate": "2026-05-21"
+    "used": false
   },
   {
     "id": "kw-054",
     "location": "강동구 고덕동",
     "service": "샤워기수전교체",
     "slug": "강동구-고덕동-샤워기수전교체",
-    "used": true,
-    "usedDate": "2026-10-24"
+    "used": false
   },
   {
     "id": "kw-055",
     "location": "강동구 고덕동",
     "service": "환풍기교체",
     "slug": "강동구-고덕동-환풍기교체",
-    "used": true,
-    "usedDate": "2026-05-22"
+    "used": false
   },
   {
     "id": "kw-056",
     "location": "강동구 고덕동",
     "service": "전체인테리어",
     "slug": "강동구-고덕동-전체인테리어",
-    "used": true,
-    "usedDate": "2026-05-23"
+    "used": false
   },
   {
     "id": "kw-057",
     "location": "강동구 고덕동",
     "service": "바닥보수",
     "slug": "강동구-고덕동-바닥보수",
-    "used": true,
-    "usedDate": "2026-10-26"
+    "used": false
   },
   {
     "id": "kw-058",
     "location": "강동구 고덕동",
     "service": "도배",
     "slug": "강동구-고덕동-도배",
-    "used": true,
-    "usedDate": "2026-05-24"
+    "used": false
   },
   {
     "id": "kw-059",
     "location": "강동구 고덕동",
     "service": "타일시공",
     "slug": "강동구-고덕동-타일시공",
-    "used": true,
-    "usedDate": "2026-08-28"
+    "used": false
   },
   {
     "id": "kw-060",
     "location": "강동구 고덕동",
     "service": "누수수리",
     "slug": "강동구-고덕동-누수수리",
-    "used": true,
-    "usedDate": "2026-09-18"
+    "used": false
   },
   {
     "id": "kw-061",
     "location": "강동구 상일동",
     "service": "변기교체",
     "slug": "강동구-상일동-변기교체",
-    "used": true,
-    "usedDate": "2026-10-30"
+    "used": false
   },
   {
     "id": "kw-062",
     "location": "강동구 상일동",
     "service": "세면대수전교체",
     "slug": "강동구-상일동-세면대수전교체",
-    "used": true,
-    "usedDate": "2026-05-25"
+    "used": false
   },
   {
     "id": "kw-063",
     "location": "강동구 상일동",
     "service": "싱크대수전교체",
     "slug": "강동구-상일동-싱크대수전교체",
-    "used": true,
-    "usedDate": "2026-05-26"
+    "used": false
   },
   {
     "id": "kw-064",
     "location": "강동구 상일동",
     "service": "샤워기수전교체",
     "slug": "강동구-상일동-샤워기수전교체",
-    "used": true,
-    "usedDate": "2026-05-27"
+    "used": false
   },
   {
     "id": "kw-065",
     "location": "강동구 상일동",
     "service": "환풍기교체",
     "slug": "강동구-상일동-환풍기교체",
-    "used": true,
-    "usedDate": "2026-05-28"
+    "used": false
   },
   {
     "id": "kw-066",
     "location": "강동구 상일동",
     "service": "전체인테리어",
     "slug": "강동구-상일동-전체인테리어",
-    "used": true,
-    "usedDate": "2026-10-09"
+    "used": false
   },
   {
     "id": "kw-067",
     "location": "강동구 상일동",
     "service": "바닥보수",
     "slug": "강동구-상일동-바닥보수",
-    "used": true,
-    "usedDate": "2026-05-29"
+    "used": false
   },
   {
     "id": "kw-068",
     "location": "강동구 상일동",
     "service": "도배",
     "slug": "강동구-상일동-도배",
-    "used": true,
-    "usedDate": "2026-05-30"
+    "used": false
   },
   {
     "id": "kw-069",
     "location": "강동구 상일동",
     "service": "타일시공",
     "slug": "강동구-상일동-타일시공",
-    "used": true,
-    "usedDate": "2026-05-31"
+    "used": false
   },
   {
     "id": "kw-070",
     "location": "강동구 상일동",
     "service": "누수수리",
     "slug": "강동구-상일동-누수수리",
-    "used": true,
-    "usedDate": "2026-09-08"
+    "used": false
   },
   {
     "id": "kw-071",
     "location": "강동구 강일동",
     "service": "변기교체",
     "slug": "강동구-강일동-변기교체",
-    "used": true,
-    "usedDate": "2026-10-14"
+    "used": false
   },
   {
     "id": "kw-072",
     "location": "강동구 강일동",
     "service": "세면대수전교체",
     "slug": "강동구-강일동-세면대수전교체",
-    "used": true,
-    "usedDate": "2026-06-01"
+    "used": false
   },
   {
     "id": "kw-073",
     "location": "강동구 강일동",
     "service": "싱크대수전교체",
     "slug": "강동구-강일동-싱크대수전교체",
-    "used": true,
-    "usedDate": "2026-11-02"
+    "used": false
   },
   {
     "id": "kw-074",
     "location": "강동구 강일동",
     "service": "샤워기수전교체",
     "slug": "강동구-강일동-샤워기수전교체",
-    "used": true,
-    "usedDate": "2026-06-02"
+    "used": false
   },
   {
     "id": "kw-075",
     "location": "강동구 강일동",
     "service": "환풍기교체",
     "slug": "강동구-강일동-환풍기교체",
-    "used": true,
-    "usedDate": "2026-06-03"
+    "used": false
   },
   {
     "id": "kw-076",
     "location": "강동구 강일동",
     "service": "전체인테리어",
     "slug": "강동구-강일동-전체인테리어",
-    "used": true,
-    "usedDate": "2026-09-14"
+    "used": false
   },
   {
     "id": "kw-077",
     "location": "강동구 강일동",
     "service": "바닥보수",
     "slug": "강동구-강일동-바닥보수",
-    "used": true,
-    "usedDate": "2026-06-04"
+    "used": false
   },
   {
     "id": "kw-078",
     "location": "강동구 강일동",
     "service": "도배",
     "slug": "강동구-강일동-도배",
-    "used": true,
-    "usedDate": "2026-09-17"
+    "used": false
   },
   {
     "id": "kw-079",
     "location": "강동구 강일동",
     "service": "타일시공",
     "slug": "강동구-강일동-타일시공",
-    "used": true,
-    "usedDate": "2026-09-28"
+    "used": false
   },
   {
     "id": "kw-080",
     "location": "강동구 강일동",
     "service": "누수수리",
     "slug": "강동구-강일동-누수수리",
-    "used": true,
-    "usedDate": "2026-06-05"
+    "used": false
   },
   {
     "id": "kw-081",
     "location": "강동구 둔촌동",
     "service": "변기교체",
     "slug": "강동구-둔촌동-변기교체",
-    "used": true,
-    "usedDate": "2026-10-04"
+    "used": false
   },
   {
     "id": "kw-082",
     "location": "강동구 둔촌동",
     "service": "세면대수전교체",
     "slug": "강동구-둔촌동-세면대수전교체",
-    "used": true,
-    "usedDate": "2026-06-06"
+    "used": false
   },
   {
     "id": "kw-083",
     "location": "강동구 둔촌동",
     "service": "싱크대수전교체",
     "slug": "강동구-둔촌동-싱크대수전교체",
-    "used": true,
-    "usedDate": "2026-06-07"
+    "used": false
   },
   {
     "id": "kw-084",
     "location": "강동구 둔촌동",
     "service": "샤워기수전교체",
     "slug": "강동구-둔촌동-샤워기수전교체",
-    "used": true,
-    "usedDate": "2026-09-02"
+    "used": false
   },
   {
     "id": "kw-085",
     "location": "강동구 둔촌동",
     "service": "환풍기교체",
     "slug": "강동구-둔촌동-환풍기교체",
-    "used": true,
-    "usedDate": "2026-06-08"
+    "used": false
   },
   {
     "id": "kw-086",
     "location": "강동구 둔촌동",
     "service": "전체인테리어",
     "slug": "강동구-둔촌동-전체인테리어",
-    "used": true,
-    "usedDate": "2026-11-07"
+    "used": false
   },
   {
     "id": "kw-087",
     "location": "강동구 둔촌동",
     "service": "바닥보수",
     "slug": "강동구-둔촌동-바닥보수",
-    "used": true,
-    "usedDate": "2026-06-09"
+    "used": false
   },
   {
     "id": "kw-088",
     "location": "강동구 둔촌동",
     "service": "도배",
     "slug": "강동구-둔촌동-도배",
-    "used": true,
-    "usedDate": "2026-09-30"
+    "used": false
   },
   {
     "id": "kw-089",
     "location": "강동구 둔촌동",
     "service": "타일시공",
     "slug": "강동구-둔촌동-타일시공",
-    "used": true,
-    "usedDate": "2026-06-10"
+    "used": false
   },
   {
     "id": "kw-090",
     "location": "강동구 둔촌동",
     "service": "누수수리",
     "slug": "강동구-둔촌동-누수수리",
-    "used": true,
-    "usedDate": "2026-06-11"
+    "used": false
   },
   {
     "id": "kw-091",
     "location": "강동구 풍납동",
     "service": "변기교체",
     "slug": "강동구-풍납동-변기교체",
-    "used": true,
-    "usedDate": "2026-06-12"
+    "used": false
   },
   {
     "id": "kw-092",
     "location": "강동구 풍납동",
     "service": "세면대수전교체",
     "slug": "강동구-풍납동-세면대수전교체",
-    "used": true,
-    "usedDate": "2026-06-13"
+    "used": false
   },
   {
     "id": "kw-093",
     "location": "강동구 풍납동",
     "service": "싱크대수전교체",
     "slug": "강동구-풍납동-싱크대수전교체",
-    "used": true,
-    "usedDate": "2026-06-14"
+    "used": false
   },
   {
     "id": "kw-094",
     "location": "강동구 풍납동",
     "service": "샤워기수전교체",
     "slug": "강동구-풍납동-샤워기수전교체",
-    "used": true,
-    "usedDate": "2026-06-15"
+    "used": false
   },
   {
     "id": "kw-095",
     "location": "강동구 풍납동",
     "service": "환풍기교체",
     "slug": "강동구-풍납동-환풍기교체",
-    "used": true,
-    "usedDate": "2026-06-16"
+    "used": false
   },
   {
     "id": "kw-096",
     "location": "강동구 풍납동",
     "service": "전체인테리어",
     "slug": "강동구-풍납동-전체인테리어",
-    "used": true,
-    "usedDate": "2026-09-29"
+    "used": false
   },
   {
     "id": "kw-097",
     "location": "강동구 풍납동",
     "service": "바닥보수",
     "slug": "강동구-풍납동-바닥보수",
-    "used": true,
-    "usedDate": "2026-08-14"
+    "used": false
   },
   {
     "id": "kw-098",
     "location": "강동구 풍납동",
     "service": "도배",
     "slug": "강동구-풍납동-도배",
-    "used": true,
-    "usedDate": "2026-06-17"
+    "used": false
   },
   {
     "id": "kw-099",
     "location": "강동구 풍납동",
     "service": "타일시공",
     "slug": "강동구-풍납동-타일시공",
-    "used": true,
-    "usedDate": "2026-06-18"
+    "used": false
   },
   {
     "id": "kw-100",
     "location": "강동구 풍납동",
     "service": "누수수리",
     "slug": "강동구-풍납동-누수수리",
-    "used": true,
-    "usedDate": "2026-10-17"
+    "used": false
   },
   {
     "id": "kw-101",
     "location": "하남시 미사동",
     "service": "변기교체",
     "slug": "하남시-미사동-변기교체",
-    "used": true,
-    "usedDate": "2026-09-22"
+    "used": false
   },
   {
     "id": "kw-102",
     "location": "하남시 미사동",
     "service": "세면대수전교체",
     "slug": "하남시-미사동-세면대수전교체",
-    "used": true,
-    "usedDate": "2026-08-03"
+    "used": false
   },
   {
     "id": "kw-103",
     "location": "하남시 미사동",
     "service": "싱크대수전교체",
     "slug": "하남시-미사동-싱크대수전교체",
-    "used": true,
-    "usedDate": "2026-06-19"
+    "used": false
   },
   {
     "id": "kw-104",
     "location": "하남시 미사동",
     "service": "샤워기수전교체",
     "slug": "하남시-미사동-샤워기수전교체",
-    "used": true,
-    "usedDate": "2026-06-20"
+    "used": false
   },
   {
     "id": "kw-105",
     "location": "하남시 미사동",
     "service": "환풍기교체",
     "slug": "하남시-미사동-환풍기교체",
-    "used": true,
-    "usedDate": "2026-06-21"
+    "used": false
   },
   {
     "id": "kw-106",
     "location": "하남시 미사동",
     "service": "전체인테리어",
     "slug": "하남시-미사동-전체인테리어",
-    "used": true,
-    "usedDate": "2026-09-21"
+    "used": false
   },
   {
     "id": "kw-107",
     "location": "하남시 미사동",
     "service": "바닥보수",
     "slug": "하남시-미사동-바닥보수",
-    "used": true,
-    "usedDate": "2026-09-06"
+    "used": false
   },
   {
     "id": "kw-108",
     "location": "하남시 미사동",
     "service": "도배",
     "slug": "하남시-미사동-도배",
-    "used": true,
-    "usedDate": "2026-09-03"
+    "used": false
   },
   {
     "id": "kw-109",
     "location": "하남시 미사동",
     "service": "타일시공",
     "slug": "하남시-미사동-타일시공",
-    "used": true,
-    "usedDate": "2026-06-22"
+    "used": false
   },
   {
     "id": "kw-110",
     "location": "하남시 미사동",
     "service": "누수수리",
     "slug": "하남시-미사동-누수수리",
-    "used": true,
-    "usedDate": "2026-06-23"
+    "used": false
   },
   {
     "id": "kw-111",
     "location": "하남시 신장동",
     "service": "변기교체",
     "slug": "하남시-신장동-변기교체",
-    "used": true,
-    "usedDate": "2026-10-13"
+    "used": false
   },
   {
     "id": "kw-112",
     "location": "하남시 신장동",
     "service": "세면대수전교체",
     "slug": "하남시-신장동-세면대수전교체",
-    "used": true,
-    "usedDate": "2026-06-24"
+    "used": false
   },
   {
     "id": "kw-113",
     "location": "하남시 신장동",
     "service": "싱크대수전교체",
     "slug": "하남시-신장동-싱크대수전교체",
-    "used": true,
-    "usedDate": "2026-10-08"
+    "used": false
   },
   {
     "id": "kw-114",
     "location": "하남시 신장동",
     "service": "샤워기수전교체",
     "slug": "하남시-신장동-샤워기수전교체",
-    "used": true,
-    "usedDate": "2026-09-16"
+    "used": false
   },
   {
     "id": "kw-115",
     "location": "하남시 신장동",
     "service": "환풍기교체",
     "slug": "하남시-신장동-환풍기교체",
-    "used": true,
-    "usedDate": "2026-06-25"
+    "used": false
   },
   {
     "id": "kw-116",
     "location": "하남시 신장동",
     "service": "전체인테리어",
     "slug": "하남시-신장동-전체인테리어",
-    "used": true,
-    "usedDate": "2026-06-26"
+    "used": false
   },
   {
     "id": "kw-117",
     "location": "하남시 신장동",
     "service": "바닥보수",
     "slug": "하남시-신장동-바닥보수",
-    "used": true,
-    "usedDate": "2026-10-25"
+    "used": false
   },
   {
     "id": "kw-118",
     "location": "하남시 신장동",
     "service": "도배",
     "slug": "하남시-신장동-도배",
-    "used": true,
-    "usedDate": "2026-06-27"
+    "used": false
   },
   {
     "id": "kw-119",
     "location": "하남시 신장동",
     "service": "타일시공",
     "slug": "하남시-신장동-타일시공",
-    "used": true,
-    "usedDate": "2026-06-28"
+    "used": false
   },
   {
     "id": "kw-120",
     "location": "하남시 신장동",
     "service": "누수수리",
     "slug": "하남시-신장동-누수수리",
-    "used": true,
-    "usedDate": "2026-10-31"
+    "used": false
   },
   {
     "id": "kw-121",
     "location": "하남시 덕풍동",
     "service": "변기교체",
     "slug": "하남시-덕풍동-변기교체",
-    "used": true,
-    "usedDate": "2026-08-16"
+    "used": false
   },
   {
     "id": "kw-122",
     "location": "하남시 덕풍동",
     "service": "세면대수전교체",
     "slug": "하남시-덕풍동-세면대수전교체",
-    "used": true,
-    "usedDate": "2026-06-29"
+    "used": false
   },
   {
     "id": "kw-123",
     "location": "하남시 덕풍동",
     "service": "싱크대수전교체",
     "slug": "하남시-덕풍동-싱크대수전교체",
-    "used": true,
-    "usedDate": "2026-08-23"
+    "used": false
   },
   {
     "id": "kw-124",
     "location": "하남시 덕풍동",
     "service": "샤워기수전교체",
     "slug": "하남시-덕풍동-샤워기수전교체",
-    "used": true,
-    "usedDate": "2026-06-30"
+    "used": false
   },
   {
     "id": "kw-125",
     "location": "하남시 덕풍동",
     "service": "환풍기교체",
     "slug": "하남시-덕풍동-환풍기교체",
-    "used": true,
-    "usedDate": "2026-07-01"
+    "used": false
   },
   {
     "id": "kw-126",
     "location": "하남시 덕풍동",
     "service": "전체인테리어",
     "slug": "하남시-덕풍동-전체인테리어",
-    "used": true,
-    "usedDate": "2026-07-02"
+    "used": false
   },
   {
     "id": "kw-127",
     "location": "하남시 덕풍동",
     "service": "바닥보수",
     "slug": "하남시-덕풍동-바닥보수",
-    "used": true,
-    "usedDate": "2026-10-03"
+    "used": false
   },
   {
     "id": "kw-128",
     "location": "하남시 덕풍동",
     "service": "도배",
     "slug": "하남시-덕풍동-도배",
-    "used": true,
-    "usedDate": "2026-07-03"
+    "used": false
   },
   {
     "id": "kw-129",
     "location": "하남시 덕풍동",
     "service": "타일시공",
     "slug": "하남시-덕풍동-타일시공",
-    "used": true,
-    "usedDate": "2026-07-04"
+    "used": false
   },
   {
     "id": "kw-130",
     "location": "하남시 덕풍동",
     "service": "누수수리",
     "slug": "하남시-덕풍동-누수수리",
-    "used": true,
-    "usedDate": "2026-07-05"
+    "used": false
   },
   {
     "id": "kw-131",
     "location": "하남시 학암동",
     "service": "변기교체",
     "slug": "하남시-학암동-변기교체",
-    "used": true,
-    "usedDate": "2026-10-22"
+    "used": false
   },
   {
     "id": "kw-132",
     "location": "하남시 학암동",
     "service": "세면대수전교체",
     "slug": "하남시-학암동-세면대수전교체",
-    "used": true,
-    "usedDate": "2026-08-24"
+    "used": false
   },
   {
     "id": "kw-133",
     "location": "하남시 학암동",
     "service": "싱크대수전교체",
     "slug": "하남시-학암동-싱크대수전교체",
-    "used": true,
-    "usedDate": "2026-08-04"
+    "used": false
   },
   {
     "id": "kw-134",
     "location": "하남시 학암동",
     "service": "샤워기수전교체",
     "slug": "하남시-학암동-샤워기수전교체",
-    "used": true,
-    "usedDate": "2026-09-25"
+    "used": false
   },
   {
     "id": "kw-135",
     "location": "하남시 학암동",
     "service": "환풍기교체",
     "slug": "하남시-학암동-환풍기교체",
-    "used": true,
-    "usedDate": "2026-07-06"
+    "used": false
   },
   {
     "id": "kw-136",
     "location": "하남시 학암동",
     "service": "전체인테리어",
     "slug": "하남시-학암동-전체인테리어",
-    "used": true,
-    "usedDate": "2026-07-07"
+    "used": false
   },
   {
     "id": "kw-137",
     "location": "하남시 학암동",
     "service": "바닥보수",
     "slug": "하남시-학암동-바닥보수",
-    "used": true,
-    "usedDate": "2026-08-13"
+    "used": false
   },
   {
     "id": "kw-138",
     "location": "하남시 학암동",
     "service": "도배",
     "slug": "하남시-학암동-도배",
-    "used": true,
-    "usedDate": "2026-07-08"
+    "used": false
   },
   {
     "id": "kw-139",
     "location": "하남시 학암동",
     "service": "타일시공",
     "slug": "하남시-학암동-타일시공",
-    "used": true,
-    "usedDate": "2026-08-31"
+    "used": false
   },
   {
     "id": "kw-140",
     "location": "하남시 학암동",
     "service": "누수수리",
     "slug": "하남시-학암동-누수수리",
-    "used": true,
-    "usedDate": "2026-07-09"
+    "used": false
   },
   {
     "id": "kw-141",
     "location": "송파구 방이동",
     "service": "변기교체",
     "slug": "송파구-방이동-변기교체",
-    "used": true,
-    "usedDate": "2026-08-29"
+    "used": false
   },
   {
     "id": "kw-142",
     "location": "송파구 방이동",
     "service": "세면대수전교체",
     "slug": "송파구-방이동-세면대수전교체",
-    "used": true,
-    "usedDate": "2026-08-21"
+    "used": false
   },
   {
     "id": "kw-143",
     "location": "송파구 방이동",
     "service": "싱크대수전교체",
     "slug": "송파구-방이동-싱크대수전교체",
-    "used": true,
-    "usedDate": "2026-08-26"
+    "used": false
   },
   {
     "id": "kw-144",
     "location": "송파구 방이동",
     "service": "샤워기수전교체",
     "slug": "송파구-방이동-샤워기수전교체",
-    "used": true,
-    "usedDate": "2026-07-10"
+    "used": false
   },
   {
     "id": "kw-145",
     "location": "송파구 방이동",
     "service": "환풍기교체",
     "slug": "송파구-방이동-환풍기교체",
-    "used": true,
-    "usedDate": "2026-07-11"
+    "used": false
   },
   {
     "id": "kw-146",
     "location": "송파구 방이동",
     "service": "전체인테리어",
     "slug": "송파구-방이동-전체인테리어",
-    "used": true,
-    "usedDate": "2026-10-29"
+    "used": false
   },
   {
     "id": "kw-147",
     "location": "송파구 방이동",
     "service": "바닥보수",
     "slug": "송파구-방이동-바닥보수",
-    "used": true,
-    "usedDate": "2026-10-18"
+    "used": false
   },
   {
     "id": "kw-148",
     "location": "송파구 방이동",
     "service": "도배",
     "slug": "송파구-방이동-도배",
-    "used": true,
-    "usedDate": "2026-09-09"
+    "used": false
   },
   {
     "id": "kw-149",
     "location": "송파구 방이동",
     "service": "타일시공",
     "slug": "송파구-방이동-타일시공",
-    "used": true,
-    "usedDate": "2026-07-12"
+    "used": false
   },
   {
     "id": "kw-150",
     "location": "송파구 방이동",
     "service": "누수수리",
     "slug": "송파구-방이동-누수수리",
-    "used": true,
-    "usedDate": "2026-10-23"
+    "used": false
   },
   {
     "id": "kw-151",
     "location": "송파구 거여동",
     "service": "변기교체",
     "slug": "송파구-거여동-변기교체",
-    "used": true,
-    "usedDate": "2026-07-13"
+    "used": false
   },
   {
     "id": "kw-152",
     "location": "송파구 거여동",
     "service": "세면대수전교체",
     "slug": "송파구-거여동-세면대수전교체",
-    "used": true,
-    "usedDate": "2026-07-14"
+    "used": false
   },
   {
     "id": "kw-153",
     "location": "송파구 거여동",
     "service": "싱크대수전교체",
     "slug": "송파구-거여동-싱크대수전교체",
-    "used": true,
-    "usedDate": "2026-07-15"
+    "used": false
   },
   {
     "id": "kw-154",
     "location": "송파구 거여동",
     "service": "샤워기수전교체",
     "slug": "송파구-거여동-샤워기수전교체",
-    "used": true,
-    "usedDate": "2026-09-26"
+    "used": false
   },
   {
     "id": "kw-155",
     "location": "송파구 거여동",
     "service": "환풍기교체",
     "slug": "송파구-거여동-환풍기교체",
-    "used": true,
-    "usedDate": "2026-08-11"
+    "used": false
   },
   {
     "id": "kw-156",
     "location": "송파구 거여동",
     "service": "전체인테리어",
     "slug": "송파구-거여동-전체인테리어",
-    "used": true,
-    "usedDate": "2026-08-17"
+    "used": false
   },
   {
     "id": "kw-157",
     "location": "송파구 거여동",
     "service": "바닥보수",
     "slug": "송파구-거여동-바닥보수",
-    "used": true,
-    "usedDate": "2026-07-16"
+    "used": false
   },
   {
     "id": "kw-158",
     "location": "송파구 거여동",
     "service": "도배",
     "slug": "송파구-거여동-도배",
-    "used": true,
-    "usedDate": "2026-08-15"
+    "used": false
   },
   {
     "id": "kw-159",
     "location": "송파구 거여동",
     "service": "타일시공",
     "slug": "송파구-거여동-타일시공",
-    "used": true,
-    "usedDate": "2026-10-01"
+    "used": false
   },
   {
     "id": "kw-160",
     "location": "송파구 거여동",
     "service": "누수수리",
     "slug": "송파구-거여동-누수수리",
-    "used": true,
-    "usedDate": "2026-07-17"
+    "used": false
   },
   {
     "id": "kw-161",
     "location": "송파구 오금동",
     "service": "변기교체",
     "slug": "송파구-오금동-변기교체",
-    "used": true,
-    "usedDate": "2026-07-18"
+    "used": false
   },
   {
     "id": "kw-162",
     "location": "송파구 오금동",
     "service": "세면대수전교체",
     "slug": "송파구-오금동-세면대수전교체",
-    "used": true,
-    "usedDate": "2026-09-05"
+    "used": false
   },
   {
     "id": "kw-163",
     "location": "송파구 오금동",
     "service": "싱크대수전교체",
     "slug": "송파구-오금동-싱크대수전교체",
-    "used": true,
-    "usedDate": "2026-10-19"
+    "used": false
   },
   {
     "id": "kw-164",
     "location": "송파구 오금동",
     "service": "샤워기수전교체",
     "slug": "송파구-오금동-샤워기수전교체",
-    "used": true,
-    "usedDate": "2026-10-21"
+    "used": false
   },
   {
     "id": "kw-165",
     "location": "송파구 오금동",
     "service": "환풍기교체",
     "slug": "송파구-오금동-환풍기교체",
-    "used": true,
-    "usedDate": "2026-10-05"
+    "used": false
   },
   {
     "id": "kw-166",
     "location": "송파구 오금동",
     "service": "전체인테리어",
     "slug": "송파구-오금동-전체인테리어",
-    "used": true,
-    "usedDate": "2026-09-01"
+    "used": false
   },
   {
     "id": "kw-167",
     "location": "송파구 오금동",
     "service": "바닥보수",
     "slug": "송파구-오금동-바닥보수",
-    "used": true,
-    "usedDate": "2026-07-19"
+    "used": false
   },
   {
     "id": "kw-168",
     "location": "송파구 오금동",
     "service": "도배",
     "slug": "송파구-오금동-도배",
-    "used": true,
-    "usedDate": "2026-08-30"
+    "used": false
   },
   {
     "id": "kw-169",
     "location": "송파구 오금동",
     "service": "타일시공",
     "slug": "송파구-오금동-타일시공",
-    "used": true,
-    "usedDate": "2026-07-20"
+    "used": false
   },
   {
     "id": "kw-170",
     "location": "송파구 오금동",
     "service": "누수수리",
     "slug": "송파구-오금동-누수수리",
-    "used": true,
-    "usedDate": "2026-09-04"
+    "used": false
   },
   {
     "id": "kw-171",
     "location": "광진구 구의동",
     "service": "변기교체",
     "slug": "광진구-구의동-변기교체",
-    "used": true,
-    "usedDate": "2026-07-21"
+    "used": false
   },
   {
     "id": "kw-172",
     "location": "광진구 구의동",
     "service": "세면대수전교체",
     "slug": "광진구-구의동-세면대수전교체",
-    "used": true,
-    "usedDate": "2026-11-06"
+    "used": false
   },
   {
     "id": "kw-173",
     "location": "광진구 구의동",
     "service": "싱크대수전교체",
     "slug": "광진구-구의동-싱크대수전교체",
-    "used": true,
-    "usedDate": "2026-08-07"
+    "used": false
   },
   {
     "id": "kw-174",
     "location": "광진구 구의동",
     "service": "샤워기수전교체",
     "slug": "광진구-구의동-샤워기수전교체",
-    "used": true,
-    "usedDate": "2026-10-02"
+    "used": false
   },
   {
     "id": "kw-175",
     "location": "광진구 구의동",
     "service": "환풍기교체",
     "slug": "광진구-구의동-환풍기교체",
-    "used": true,
-    "usedDate": "2026-08-09"
+    "used": false
   },
   {
     "id": "kw-176",
     "location": "광진구 구의동",
     "service": "전체인테리어",
     "slug": "광진구-구의동-전체인테리어",
-    "used": true,
-    "usedDate": "2026-08-10"
+    "used": false
   },
   {
     "id": "kw-177",
     "location": "광진구 구의동",
     "service": "바닥보수",
     "slug": "광진구-구의동-바닥보수",
-    "used": true,
-    "usedDate": "2026-07-22"
+    "used": false
   },
   {
     "id": "kw-178",
     "location": "광진구 구의동",
     "service": "도배",
     "slug": "광진구-구의동-도배",
-    "used": true,
-    "usedDate": "2026-07-23"
+    "used": false
   },
   {
     "id": "kw-179",
     "location": "광진구 구의동",
     "service": "타일시공",
     "slug": "광진구-구의동-타일시공",
-    "used": true,
-    "usedDate": "2026-07-24"
+    "used": false
   },
   {
     "id": "kw-180",
     "location": "광진구 구의동",
     "service": "누수수리",
     "slug": "광진구-구의동-누수수리",
-    "used": true,
-    "usedDate": "2026-08-12"
+    "used": false
   },
   {
     "id": "kw-181",
     "location": "광진구 화양동",
     "service": "변기교체",
     "slug": "광진구-화양동-변기교체",
-    "used": true,
-    "usedDate": "2026-08-02"
+    "used": false
   },
   {
     "id": "kw-182",
     "location": "광진구 화양동",
     "service": "세면대수전교체",
     "slug": "광진구-화양동-세면대수전교체",
-    "used": true,
-    "usedDate": "2026-10-16"
+    "used": false
   },
   {
     "id": "kw-183",
     "location": "광진구 화양동",
     "service": "싱크대수전교체",
     "slug": "광진구-화양동-싱크대수전교체",
-    "used": true,
-    "usedDate": "2026-10-10"
+    "used": false
   },
   {
     "id": "kw-184",
     "location": "광진구 화양동",
     "service": "샤워기수전교체",
     "slug": "광진구-화양동-샤워기수전교체",
-    "used": true,
-    "usedDate": "2026-08-05"
+    "used": false
   },
   {
     "id": "kw-185",
     "location": "광진구 화양동",
     "service": "환풍기교체",
     "slug": "광진구-화양동-환풍기교체",
-    "used": true,
-    "usedDate": "2026-09-23"
+    "used": false
   },
   {
     "id": "kw-186",
     "location": "광진구 화양동",
     "service": "전체인테리어",
     "slug": "광진구-화양동-전체인테리어",
-    "used": true,
-    "usedDate": "2026-07-25"
+    "used": false
   },
   {
     "id": "kw-187",
     "location": "광진구 화양동",
     "service": "바닥보수",
     "slug": "광진구-화양동-바닥보수",
-    "used": true,
-    "usedDate": "2026-09-15"
+    "used": false
   },
   {
     "id": "kw-188",
     "location": "광진구 화양동",
     "service": "도배",
     "slug": "광진구-화양동-도배",
-    "used": true,
-    "usedDate": "2026-11-03"
+    "used": false
   },
   {
     "id": "kw-189",
     "location": "광진구 화양동",
     "service": "타일시공",
     "slug": "광진구-화양동-타일시공",
-    "used": true,
-    "usedDate": "2026-07-26"
+    "used": false
   },
   {
     "id": "kw-190",
     "location": "광진구 화양동",
     "service": "누수수리",
     "slug": "광진구-화양동-누수수리",
-    "used": true,
-    "usedDate": "2026-07-27"
+    "used": false
   },
   {
     "id": "kw-191",
     "location": "광진구 자양동",
     "service": "변기교체",
     "slug": "광진구-자양동-변기교체",
-    "used": true,
-    "usedDate": "2026-07-28"
+    "used": false
   },
   {
     "id": "kw-192",
     "location": "광진구 자양동",
     "service": "세면대수전교체",
     "slug": "광진구-자양동-세면대수전교체",
-    "used": true,
-    "usedDate": "2026-08-18"
+    "used": false
   },
   {
     "id": "kw-193",
     "location": "광진구 자양동",
     "service": "싱크대수전교체",
     "slug": "광진구-자양동-싱크대수전교체",
-    "used": true,
-    "usedDate": "2026-07-29"
+    "used": false
   },
   {
     "id": "kw-194",
     "location": "광진구 자양동",
     "service": "샤워기수전교체",
     "slug": "광진구-자양동-샤워기수전교체",
-    "used": true,
-    "usedDate": "2026-10-15"
+    "used": false
   },
   {
     "id": "kw-195",
     "location": "광진구 자양동",
     "service": "환풍기교체",
     "slug": "광진구-자양동-환풍기교체",
-    "used": true,
-    "usedDate": "2026-08-19"
+    "used": false
   },
   {
     "id": "kw-196",
     "location": "광진구 자양동",
     "service": "전체인테리어",
     "slug": "광진구-자양동-전체인테리어",
-    "used": true,
-    "usedDate": "2026-10-07"
+    "used": false
   },
   {
     "id": "kw-197",
     "location": "광진구 자양동",
     "service": "바닥보수",
     "slug": "광진구-자양동-바닥보수",
-    "used": true,
-    "usedDate": "2026-07-31"
+    "used": false
   },
   {
     "id": "kw-198",
     "location": "광진구 자양동",
     "service": "도배",
     "slug": "광진구-자양동-도배",
-    "used": true,
-    "usedDate": "2026-08-20"
+    "used": false
   },
   {
     "id": "kw-199",
     "location": "광진구 자양동",
     "service": "타일시공",
     "slug": "광진구-자양동-타일시공",
-    "used": true,
-    "usedDate": "2026-07-30"
+    "used": false
   },
   {
     "id": "kw-200",
     "location": "광진구 자양동",
     "service": "누수수리",
     "slug": "광진구-자양동-누수수리",
-    "used": true,
-    "usedDate": "2026-08-22"
+    "used": false
   }
 ]
