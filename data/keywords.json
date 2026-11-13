@@ -1134,7 +1134,8 @@
     "location": "송파구 오금동",
     "service": "세면대수전교체",
     "slug": "송파구-오금동-세면대수전교체",
-    "used": false
+    "used": true,
+    "usedDate": "2026-11-13"
   },
   {
     "id": "kw-163",
