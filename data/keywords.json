@@ -1356,7 +1356,8 @@
     "location": "광진구 자양동",
     "service": "싱크대수전교체",
     "slug": "광진구-자양동-싱크대수전교체",
-    "used": false
+    "used": true,
+    "usedDate": "2026-11-17"
   },
   {
     "id": "kw-194",
