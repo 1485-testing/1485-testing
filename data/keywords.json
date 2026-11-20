@@ -88,7 +88,8 @@
     "location": "강동구 성내동",
     "service": "싱크대수전교체",
     "slug": "강동구-성내동-싱크대수전교체",
-    "used": false
+    "used": true,
+    "usedDate": "2026-11-20"
   },
   {
     "id": "kw-014",
