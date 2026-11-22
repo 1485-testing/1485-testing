@@ -838,7 +838,8 @@
     "location": "하남시 신장동",
     "service": "타일시공",
     "slug": "하남시-신장동-타일시공",
-    "used": false
+    "used": true,
+    "usedDate": "2026-11-22"
   },
   {
     "id": "kw-120",
