@@ -878,7 +878,8 @@
     "location": "하남시 덕풍동",
     "service": "샤워기수전교체",
     "slug": "하남시-덕풍동-샤워기수전교체",
-    "used": false
+    "used": true,
+    "usedDate": "2026-11-28"
   },
   {
     "id": "kw-125",
